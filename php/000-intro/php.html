@@ -1,9 +1,36 @@
-<!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Hallo-Welt-Beispiel</title>
+		<?php print "
+		<title>
+			Individueller Titel der Seite
+		</title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<br>
+		?>
+<?php print "<meta name=\"description\" content=\"Individuelle
+Beschreibung der Seite\"/>"; ?>
+		<link rel="stylesheet" href="Link zum Stylesheet ist für alle Seiten
+gleich">
 	</head>
 	<body>
-		<?php echo 'Hallo Welt!'; ?>
+		<hr>
+		Today is <?php 
+			echo "Heute: " . date("y-m-d"); 
+			print date();
+			?> . Here's the latest news.
 	</body>
 </html>
