@@ -74,7 +74,7 @@ Software ist ein wesentlicher Bestandteil moderner Technologie und ermöglicht e
    HTML, CSS und JavaScript sind grundlegende Technologien, die zusammen verwendet werden, um Websites und Webanwendungen zu erstellen und zu gestalten. Jede dieser Technologien hat eine spezifische Rolle:
 
 1. HTML (HyperText Markup Language)
-   HTML ist die Standardsprache zur Strukturierung von Inhalten im Web. Es verwendet sogenannte „Tags“, um verschiedene Elemente wie Überschriften, Absätze, Bilder und Links zu definieren. Diese Elemente bilden das Grundgerüst einer Webseite.
+   HTML ist die Standardsprache **zur Strukturierung von Inhalten im Web**. Es verwendet sogenannte „Tags“, um verschiedene Elemente wie Überschriften, Absätze, Bilder und Links zu definieren. Diese Elemente bilden das Grundgerüst einer Webseite.
 
 ```html
 <h1>Willkommen auf meiner Webseite</h1>
@@ -83,7 +83,7 @@ Software ist ein wesentlicher Bestandteil moderner Technologie und ermöglicht e
 ```
 
 2. CSS (Cascading Style Sheets)
-   CSS wird verwendet, um das Aussehen und die Gestaltung von HTML-Elementen auf einer Webseite zu kontrollieren. Mit CSS können Sie Farben, Schriftarten, Abstände, Layouts und mehr anpassen. Es trennt das Design (das „Wie“) vom Inhalt (dem „Was“).
+   CSS wird verwendet, **um das Aussehen und die Gestaltung von HTML-Elementen auf einer Webseite zu kontrollieren**. Mit CSS können Sie Farben, Schriftarten, Abstände, Layouts und mehr anpassen. Es trennt das Design (das „Wie“) vom Inhalt (dem „Was“).
 
 ```css
 h1 {
@@ -111,18 +111,18 @@ https://www.youtube.com/watch?v=YlLUP01Qgt4
 
 ```
 
-================================================ 
+================================================
 
 4. Internet
-Was ist das Internet?
-Definition und grundlegende Struktur
-Wie funktioniert das Internet?
-Kurze Erklärung von Netzwerken, Servern und Clients
-Erklärung von URLs, HTTP/HTTPS und Webbrowsern
-Anwendungen des Internets
-E-Mail, Soziale Netzwerke, Online-Shopping, Online-Lernen
-Sicherheit im Internet
-Grundlagen der Cybersicherheit: Passwörter, Phishing, sichere Webseiten
+   Was ist das Internet?
+   Definition und grundlegende Struktur
+   Wie funktioniert das Internet?
+   Kurze Erklärung von Netzwerken, Servern und Clients
+   Erklärung von URLs, HTTP/HTTPS und Webbrowsern
+   Anwendungen des Internets
+   E-Mail, Soziale Netzwerke, Online-Shopping, Online-Lernen
+   Sicherheit im Internet
+   Grundlagen der Cybersicherheit: Passwörter, Phishing, sichere Webseiten
 
 5. Datenbanken
    Was ist eine Datenbank?
