@@ -56,26 +56,75 @@ https://www.youtube.com/watch?v=IhCZu8ALmFE&list=PL6DU7YsYvRpA31RgBg1MUTf2EuVtmA
 
 2. Software
    Was ist Software?
+   Software ist eine Sammlung von Programmen, Daten und Anweisungen, die einem Computer oder einem anderen elektronischen Gerät sagen, wie es bestimmte Aufgaben ausführen soll. Im Gegensatz zur Hardware, die die physischen Komponenten eines Computers umfasst (wie der Prozessor, der Speicher und die Festplatte), ist Software immateriell und besteht aus Code, der in einer für den Computer verständlichen Sprache geschrieben wurde.
 
-   Definition und Unterscheidung zwischen Systemsoftware und Anwendungssoftware
-   Beispiele für Anwendungssoftware
-   Textverarbeitung (z.B. Microsoft Word)
-   Tabellenkalkulation (z.B. Microsoft Excel)
-   Browser (z.B. Google Chrome, Firefox)
-   Wie wird Software entwickelt?
-   Überblick über den Softwareentwicklungsprozess: Planung, Design, Programmierung, Testen, Deployment
+Es gibt verschiedene Arten von Software:
 
-3. Internet
-   Was ist das Internet?
-   Definition und grundlegende Struktur
-   Wie funktioniert das Internet?
-   Kurze Erklärung von Netzwerken, Servern und Clients
-   Erklärung von URLs, HTTP/HTTPS und Webbrowsern
-   Anwendungen des Internets
-   E-Mail, Soziale Netzwerke, Online-Shopping, Online-Lernen
-   Sicherheit im Internet
-   Grundlagen der Cybersicherheit: Passwörter, Phishing, sichere Webseiten
-4. Datenbanken
+Systemsoftware: Diese Art von Software verwaltet die grundlegenden Funktionen eines Computers. Dazu gehört das Betriebssystem (z.B. Windows, Linux, macOS), das den Betrieb von Hardware und anderer Software koordiniert.
+
+Anwendungssoftware: Diese Software dient speziellen Aufgaben, die der Benutzer ausführt. Beispiele sind Textverarbeitungsprogramme (z.B. Microsoft Word), Webbrowser (z.B. Google Chrome) und Spiele.
+
+Entwicklungssoftware: Auch bekannt als Entwicklungsumgebungen, diese Software wird von Programmierern verwendet, um andere Software zu erstellen. Beispiele sind IDEs (Integrated Development Environments) wie Visual Studio oder Eclipse.
+
+Firmware: Dies ist eine spezielle Art von Software, die fest in die Hardware integriert ist und grundlegende Steuerungsfunktionen bereitstellt. Sie wird oft in Geräten wie Routern, Druckern oder Mobiltelefonen verwendet.
+
+Software ist ein wesentlicher Bestandteil moderner Technologie und ermöglicht es Computern und anderen Geräten, nützliche Aufgaben zu erledigen, die das tägliche Leben erleichtern.
+
+3. HTML-CSS-JAVASCRIPT
+   HTML, CSS und JavaScript sind grundlegende Technologien, die zusammen verwendet werden, um Websites und Webanwendungen zu erstellen und zu gestalten. Jede dieser Technologien hat eine spezifische Rolle:
+
+1. HTML (HyperText Markup Language)
+   HTML ist die Standardsprache zur Strukturierung von Inhalten im Web. Es verwendet sogenannte „Tags“, um verschiedene Elemente wie Überschriften, Absätze, Bilder und Links zu definieren. Diese Elemente bilden das Grundgerüst einer Webseite.
+
+```html
+<h1>Willkommen auf meiner Webseite</h1>
+<p>Dies ist ein Absatz mit Text.</p>
+<img src="bild.jpg" alt="Ein Bild" />
+```
+
+2. CSS (Cascading Style Sheets)
+   CSS wird verwendet, um das Aussehen und die Gestaltung von HTML-Elementen auf einer Webseite zu kontrollieren. Mit CSS können Sie Farben, Schriftarten, Abstände, Layouts und mehr anpassen. Es trennt das Design (das „Wie“) vom Inhalt (dem „Was“).
+
+```css
+h1 {
+  color: blue;
+  font-size: 24px;
+}
+
+p {
+  color: gray;
+  line-height: 1.5;
+}
+```
+
+3. JavaScript
+   JavaScript ist eine Programmiersprache, die verwendet wird, um Webseiten interaktiv und dynamisch zu machen. Es ermöglicht Funktionen wie Formulareingaben zu validieren, interaktive Karten zu erstellen, Inhalte basierend auf Benutzereingaben zu ändern und vieles mehr. JavaScript wird im Browser ausgeführt und kann in Verbindung mit HTML und CSS verwendet werden.
+
+   ```javascript
+   document.getElementById('button').onclick = function () {
+     alert('Button wurde geklickt!')
+   }
+   ```
+
+```
+https://www.youtube.com/watch?v=YlLUP01Qgt4
+
+```
+
+================================================ 
+
+4. Internet
+Was ist das Internet?
+Definition und grundlegende Struktur
+Wie funktioniert das Internet?
+Kurze Erklärung von Netzwerken, Servern und Clients
+Erklärung von URLs, HTTP/HTTPS und Webbrowsern
+Anwendungen des Internets
+E-Mail, Soziale Netzwerke, Online-Shopping, Online-Lernen
+Sicherheit im Internet
+Grundlagen der Cybersicherheit: Passwörter, Phishing, sichere Webseiten
+
+5. Datenbanken
    Was ist eine Datenbank?
    Definition und Zweck einer Datenbank
    Arten von Datenbanken
