@@ -8,6 +8,9 @@ Tabelle zur Notenänderung
 59 und darunter: F
 
 2. Fibonacci-Folge
+
+   ![alt text](fibonacci.png)
+
    ![alt text](fibonacci.png)
 
 - Die Fibonacci-Folge ist eine Folge, bei der die ersten beiden Elemente 0 und 1 sind. - Jedes nachfolgende Element ist die Summe aus den beiden vorherigen Elementen.
