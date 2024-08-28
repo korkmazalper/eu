@@ -9,9 +9,7 @@ Tabelle zur Notenänderung
 
 2. Fibonacci-Folge
 
-   ![alt text](./fibonacci.png)
-
-   ![alt text](fibonacci.png)
+   ![alt text](./js/os/fibonacci.png)
 
 - Die Fibonacci-Folge ist eine Folge, bei der die ersten beiden Elemente 0 und 1 sind. - Jedes nachfolgende Element ist die Summe aus den beiden vorherigen Elementen.
 
