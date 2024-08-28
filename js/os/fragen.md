@@ -9,7 +9,7 @@ Tabelle zur Notenänderung
 
 2. Fibonacci-Folge
 
-   ![alt text](fibonacci.png)
+   ![alt text](./fibonacci.png)
 
    ![alt text](fibonacci.png)
 
