@@ -28,7 +28,6 @@ Gibt die Position des Vorkommens von needle relativ zum Anfang der Zeichenkette 
 **Warnung**
 Diese Funktion kann sowohl das boolsche false zurückliefern, als auch einen nicht-boolschen Wert, welcher zu false ausgewertet wird. Weitere Informationen entnehmen Sie bitte dem Abschnitt über die boolschen Typen. Benutzen Sie deshalb den === Operator, um den Rückgabewert dieser Funktion zu überprüfen.
 
-
 **Beispiel:**
 
 ```php
@@ -61,4 +60,25 @@ while(true){
     }
 
 }
+```
+
+- **Aufgabe:** Schreiben Sie Ihre eigene Funktion `stringLength($str)`.  Verwenden Sie nicht die eingebaute Funktion `strlength($str)`.
+
+```php
+//code
+```
+
+- **Aufgabe:** Der Benutzer wird sein eigenes Passwort für das System festlegen. Das Passwort muss die folgenden Sicherheitsanforderungen erfüllen:
+  1- Das Passwort muss mindestens 8 Zeichen lang sein.
+  2- Das Passwort muss mindestens einen Großbuchstaben enthalten, wobei der Großbuchstabe im Bereich A-H liegen muss.
+  3- Das Passwort muss mindestens einen Kleinbuchstaben enthalten, wobei der Kleinbuchstabe im Bereich a-h liegen muss.
+  4- Das Passwort muss mindestens eine Zahl enthalten, wobei die Zahl zwischen 0-5 liegen muss.
+  5- Das Passwort muss mindestens ein „ + - \* / = $ \ . : , ; " ? !“ enthalten
+  6- Die Funktion muss einen booleschen Wert zurückgeben
+  Schreiben Sie eine php-Funktion.
+
+  Benutzen Sie nicht die Funktion `preg_match()`.
+
+```php
+// code
 ```

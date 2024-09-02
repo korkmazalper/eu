@@ -12,11 +12,10 @@
 
 - z.B.: Die täglichen Temperaturdaten der letzten 100 Jahre sind in ihrer Gesamtheit schwer zu verstehen und geben nur Auskunft über die Temperaturen an bestimmten Tagen. Dank der mit ökonometrischen Methoden erstellten Modelle lassen sich jedoch Informationen über mögliche Temperaturveränderungen in der Zukunft gewinnen.
 
+
 ## Das Umfeld der Softwareentwicklung
 
 ### Begriffe im Umfeld der SE
-
-![alt text](image.png)
 
 - **Datenbank:** Eine Datenbank ist eine organisierte Sammlung von Daten, die effizient gespeichert und abgerufen werden können. Im Arbeitsleben werden SQL-Datenbanken zur Speicherung strukturierter Daten verwendet.
 - **DevOps-Entwickler/Ingenieur:** Ein Devops Ingenieur ist ein IT-Generalist, der über weitreichende Kenntnisse in **Entwicklung** und **Betrieb** verfügen sollte, einschließlich Programierung, Infrastrukturmanagement, Systemadministration und DevOps-Tools.
