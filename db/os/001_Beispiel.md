@@ -4,29 +4,21 @@
 
 Es soll eine relationale Datenbank erstellt werden, mit deren Hilfe die Bücher einer Bibliothek und die Verleihungsvorgänge verwaltet werden. Folgende Daten soll die Datenbank enthalten:
 
-
 • Kunde: Kundennummer, Nachname, Vorname, Adresse, Telefonnummer
-• Buch: Titel, ISBN, Auflage, Verlag, Verlagsnummer, Buchnummer, Anschaffungsdatum
+• Buch: Titel, ISBN, Auflage, Buchnummer, Anschaffungsdatum, Verlagsnummer, Verlag
 • Verleihvorgang: Buchnummer, Kundennummer, Ausleihdatum, Rückgabedatum
 
 - Entwickle ein ER-Modell
 - Ableite ein relationales Modell (nicht normalisiert)
-
-
-
-
-
-
-
-
-
-
-
+- Entwickle den SQL-Script um die folgende Datenbank zu erstellen:
+  • Kunde: Kundennummer, Nachname, Vorname, Adresse, Telefonnummer
+  • Buch: Titel, ISBN, Auflage, Buchnummer, Anschaffungsdatum, Verlagsnummer
+  • Verleihvorgang: Buchnummer, Kundennummer, Ausleihdatum, Rückgabedatum
+  . Verlag: Verlagsnummer, Verlag
 
 
 
 ## Beispiel 2
-
 
 ## Beispiel 3
 
