@@ -62,10 +62,28 @@ while(true){
 }
 ```
 
-- **Aufgabe:** Schreiben Sie Ihre eigene Funktion `stringLength($str)`.  Verwenden Sie nicht die eingebaute Funktion `strlength($str)`.
+- **Aufgabe:** Schreiben Sie Ihre eigene Funktion `stringLength($str)`. Verwenden Sie nicht die eingebaute Funktion `strlength($str)`.
 
 ```php
-//code
+function stringLength($string) {
+    if ($string === null || $string==="") {
+        return 0;
+    }
+    $i = 0;
+    while (isset($string[$i]) ) {
+$i++;
+}
+return $i;
+}
+
+echo stringLength(null) . "\n";
+echo stringLength(""). "\n";
+echo stringLength("alp"). "\n";
+echo stringLength("\n"). "\n";
+
+
+?>
+
 ```
 
 - **Aufgabe:** Der Benutzer wird sein eigenes Passwort für das System festlegen. Das Passwort muss die folgenden Sicherheitsanforderungen erfüllen:
@@ -80,5 +98,35 @@ while(true){
   Benutzen Sie nicht die Funktion `preg_match()`.
 
 ```php
-// code
+function isPasswordValid($pass) {
+$alphabetB="ABCDEFGHIJKLMN";
+$alphabetS="abcdefghijklmn";
+$digits="012345679";
+$specialChars="+-/\*.,;\"'\$\\";
+
+    $isCharBigIncluded=false;
+    $isCharSmallIncluded=false;
+    $isDigitIncluded=false;
+    $isSpecialCharsIncluded=false;
+
+    for($i=0;$i<stringLength($pass);$i++){
+        if(strpos($alphabetB,$pass[$i])!==false){
+            $isCharBigIncluded=true;
+        } elseif(strpos($alphabetS,$pass[$i])!==false){
+            $isCharSmallIncluded=true;
+        }
+         elseif(strpos($digits,$pass[$i])!==false){
+            $isDigitIncluded=true;
+        } elseif(strpos($specialChars,$pass[$i])!==false) {
+            $isSpecialCharsIncluded=true;
+        }
+    }
+    return $isSpecialCharsIncluded && $isCharBigIncluded && $isDigitIncluded;
+
+}
+
+echo json_encode( isPasswordValid("aB0+%1111111") ) . "\n";
+echo json_encode( isPasswordValid("aB1%")). "\n";
+echo json_encode( isPasswordValid("aB1$"));
+
 ```
