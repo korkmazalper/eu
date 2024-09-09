@@ -16,15 +16,15 @@
 
 ### Beispiele für Programmiersprachen:
 
-**Python**: Bekannt für ihre einfache Syntax, eignet sie sich gut für Einsteiger und wird für viele Anwendungen eingesetzt.
-**Java**: Eine vielseitige Sprache, die für die Entwicklung von Android-Apps und großen Unternehmenssoftware verwendet wird.
-**JavaScript**: Die Sprache des Webs, sie macht Webseiten interaktiv.
-**PHP**: Eine serverseitige Skriptsprache, die besonders für Webentwicklung verwendet wird. Sie ermöglicht die Erstellung dynamischer Webseiten und wird oft mit Datenbankmanagementsystemen wie MySQL kombiniert.
-**C++**: Eine leistungsstarke Sprache für Spieleentwicklung und Systeme programmierung.
-**Go**: Einfach, effizient, ideal für Netzwerk- und Cloud-Anwendungen sowie Microservices.
-**Prolog**: Logisch, für KI und Expertensysteme.
-**Haskell**: Rein funktional, für Forschung und Webentwicklung.
-**F#**: Funktional auf .NET, für Datenintensive Anwendungen und DSLs(Domain-Specific Language).
+- **Python**: Bekannt für ihre einfache Syntax, eignet sie sich gut für Einsteiger und wird für viele Anwendungen eingesetzt.
+- **Java**: Eine vielseitige Sprache, die für die Entwicklung von Android-Apps und großen Unternehmenssoftware verwendet wird.
+- **JavaScript**: Die Sprache des Webs, sie macht Webseiten interaktiv.
+- **PHP**: Eine serverseitige Skriptsprache, die besonders für Webentwicklung verwendet wird. Sie ermöglicht die Erstellung dynamischer Webseiten und wird oft mit Datenbankmanagementsystemen wie MySQL kombiniert.
+- **C++**: Eine leistungsstarke Sprache für Spieleentwicklung und Systeme programmierung.
+- **Go**: Einfach, effizient, ideal für Netzwerk- und Cloud-Anwendungen sowie Microservices.
+- **Prolog**: Logisch, für KI und Expertensysteme.
+- **Haskell**: Rein funktional, für Forschung und Webentwicklung.
+- **F#**: Funktional auf .NET, für Datenintensive Anwendungen und DSLs(Domain-Specific Language).
 
 ### Programmierparadigma
 
