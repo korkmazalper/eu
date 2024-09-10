@@ -1,10 +1,10 @@
 ## Programmiersprache
 
-- Eine Programmiersprache ist eine künstliche, präsize und detaillierte Sprache, um die Anweisungen an einen Computer zu übermitteln.
+- Eine Programmiersprache ist eine **künstliche, präsize** und **detaillierte** Sprache, um **die Anweisungen an einen Computer zu übermitteln**.
 
 ### Warum brauchen wir Programmiersprachen?
 
-- **Computer verstehen nur Maschinencode**: Computer verstehen nur eine sehr einfache Sprache, die aus Nullen und Einsen besteht (Maschinencode). Programmiersprachen dienen als Brücke zwischen menschlicher Logik und dem Maschinencode.
+- **Computer verstehen nur Maschinencode**: Computer verstehen nur eine sehr einfache Sprache, die aus **Nullen** und **Einsen** besteht (Maschinencode). Programmiersprachen dienen als Brücke zwischen menschlicher Logik und dem Maschinencode.
 - **Automatisierung**: Mit Programmiersprachen können wir Aufgaben automatisieren, die für Menschen langweilig oder zeitaufwendig sind.
 - **Kreativität**: Programmieren ist wie das Bauen mit digitalen Legosteinen. Man kann damit unglaublich kreative Dinge erschaffen, von einfachen Websites bis hin zu komplexen Computerspielen.
 
@@ -80,9 +80,9 @@ int number;
 
 ##### Prozedurales Programmierparadigma
 
-Das prozedurale Programmierparadigma baut auf dem strukturierten Programmierparadigma auf. Es zielt darauf ab, **Quelltexte wieder verwendbar** zu machen. Dazu wird das Programm in überschaubare Teile aufgeteilt. Diese Teile werden als **Prozeduren**, **Unterprogramme**
-oder **Funktionen** bezeichnet.
-Dadurch soll der Programmcode übersichtlicher und Code-Wiederholungen (Redundanzen) vermieden werden. Diese Vorgehensweise bietet den Vorteil, dass man universell einsetzbare, einfach testbare, wartbare und weiterentwickbare Prozeduren entwickeln kann.
+Das prozedurale Programmierparadigma baut auf dem strukturierten Programmierparadigma auf. Es zielt darauf ab, **Quelltexte wieder verwendbar** zu machen. Dazu wird das Programm in überschaubare Teile aufgeteilt. Diese Teile werden als **Prozeduren**, **Unterprogramme** oder **Funktionen** bezeichnet.
+
+Dadurch soll der Programmcode übersichtlicher und Code-Wiederholungen (Redundanzen) vermieden werden. Diese Vorgehensweise bietet den Vorteil, dass man **universell einsetzbare, einfach testbare, wartbare und weiterentwickbare** Prozeduren entwickeln kann.
 
 - C, FORTRAN, COBOL, Pascal
 
@@ -105,15 +105,15 @@ Bei diesem Ansatz werden mit Hilfe der **SOLID-Prinzipien** Objekte programmiert
 
 - Was ist SOLID?
 
-  1. S - Single Responsibility Principle (Prinzip der eindeutigen Verantwortlichkeit): Das SRP besagt, dass jedes Modul (z. B. Klasse, Method oder Funktion) genau eine Aufgabe erfüllen soll.
+  1. **S - Single Responsibility Principle (Prinzip der eindeutigen Verantwortlichkeit)**: Das SRP besagt, dass jedes Modul (z. B. Klasse, Method oder Funktion) genau eine Aufgabe erfüllen soll.
 
-  2. O – Open-Closed Principle (Prinzip der Offen- und Verschlossenheit): Das OCP besagt, dass eine Klasse offen für Erweiterungen, aber geschlossen gegenüber Modifikationen sein soll.
+  2. **O – Open-Closed Principle (Prinzip der Offen- und Verschlossenheit)**: Das OCP besagt, dass eine Klasse offen für Erweiterungen, aber geschlossen gegenüber Modifikationen sein soll.
 
-  3. L – Liskov's Substitution Principle (Liskovsches Substitutionsprinzip): Das LSP besagt, dass sich Subtypen so verhalten müssen wie ihr Basistyp.
+  3. **L – Liskov's Substitution Principle (Liskovsches Substitutionsprinzip)**: Das LSP besagt, dass sich Subtypen so verhalten müssen wie ihr Basistyp.
 
-  4. I – Interface Segregation Principle (Prinzip der Schnittstellentrennung): Das ISP-Prinzip besagt, dass Interfaces so klein wie möglich sein sollten und auch nur das enthalten, was wirklich benötigt wird.
+  4. **I – Interface Segregation Principle (Prinzip der Schnittstellentrennung)**: Das ISP-Prinzip besagt, dass Interfaces so klein wie möglich sein sollten und auch nur das enthalten, was wirklich benötigt wird.
 
-  5. D – Dependency Inversion Principle (Prinzip der Abhängigkeitsinversion): Das DIP gibt vor, dass Module höherer Ebenen nicht von Modulen niederer Ebenen abhängen sollen.
+  5. **D – Dependency Inversion Principle (Prinzip der Abhängigkeitsinversion)**: Das DIP gibt vor, dass Module höherer Ebenen nicht von Modulen niederer Ebenen abhängen sollen.
 
 - Warum sind die SOLID-Prinzipien wichtig?
 
