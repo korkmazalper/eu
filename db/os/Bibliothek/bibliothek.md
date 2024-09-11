@@ -43,9 +43,8 @@ foreign key(kundennummer) References kunde(kundennummer)
 - Die Tabellen Buch und Vorleihgang haben Fremdschlüsseln (Foreign Keys), die eigentlich die Primärschlüssel von anderen Tabellen sind. Um die ungewünschten Fehlermeldungen zu vermeiden, muss man die logische Verknüpfungen zwischen Tabellen beachten.
 - Beachten Sie die Datentypen von Attributen
 
+```sql
 
-```sql
-```sql
 drop DATABASE if EXISTS `kunde_buch`;
 
 create DATABASE if not exists `kunde_buch`;
@@ -121,6 +120,8 @@ foreign key(kundennummer) References kunde(kundennummer)
 insert into buch (titel, anschaffungsdatum, verlagid) values ('Otcom', '1/5/2024', 1);
 insert into buch (titel, anschaffungsdatum, verlagid) values ('Flexidy', '4/28/2024', 2);
 insert into buch (titel, anschaffungsdatum, verlagid) values ('Zathin', '2/3/2024', 3);
+
+```
 
 ```
 
