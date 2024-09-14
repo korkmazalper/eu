@@ -43,10 +43,10 @@ project-root/
 │ ├── jquery.js
 │ └── bootstrap.css
 └── assets/
-    ├── videos/
-    │ └── intro.mp4
-    └── docs/
-      └── resume.pdf
+  ├── videos/
+  │ └── intro.mp4
+  └── docs/
+    └── resume.pdf
 
 ```
 
@@ -104,7 +104,7 @@ chmod +x createproject.sh
 
 ```
 
-Bei Windows kann man eine Batch-Datei erstellt, deren Inhalt:
+Unter Windows können Sie eine Batch-Datei mit folgendem Inhalt erstellen:
 
 ```batch
 
