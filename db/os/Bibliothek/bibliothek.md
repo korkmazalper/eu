@@ -255,6 +255,203 @@ INSERT INTO verleihvorgang (buchnummer, kundennummer, rueckgabedatum, ausleihdat
 (8, 8, '2023-10-05', '2023-09-05'),
 (9, 9, '2023-10-10', '2023-09-10'),
 (10, 10, '2023-10-15', '2023-09-15');
-    
+
+```
+
+### Wiedererweiterte Datenbank
+
+```sql
+drop DATABASE if EXISTS `kunde_buch_e1`;
+
+create DATABASE `kunde_buch_e1`;
+use `kunde_buch_e1`;
+
+create table if not exists stadt_plz(
+stadtplzid int primary key AUTO_INCREMENT,
+plz varchar(20) not null,
+stadt varchar(100) not null
+);
+
+create table if not exists adresse(
+adresseid int primary key AUTO_INCREMENT,
+strasse varchar(300),
+stadtplzid int not null,
+foreign key (stadtplzid) references stadt_plz(stadtplzid)
+);
+
+create table if not exists kunde(
+kundennummer int primary key auto_increment,
+kundenvorname varchar(250) not null,
+kundennachname varchar(250) not null,
+telefonnummer varchar(50),
+adresseid int not null,
+FOREIGN key (adresseid) references adresse(adresseid)
+);
+
+INSERT INTO stadt_plz (plz, stadt) VALUES
+('12345', 'Berlin'),
+('23456', 'Hamburg'),
+('34567', 'München'),
+('45678', 'Köln'),
+('45978', 'Köln'),
+('45778', 'Köln'),
+('45878', 'Köln'),
+('56789', 'Frankfurt'),
+('67890', 'Stuttgart'),
+('78901', 'Düsseldorf'),
+('89012', 'Dortmund'),
+('90123', 'Essen'),
+('01234', 'Leipzig'),
+('99427', 'Weimar'),
+('01034', 'Hamburg'),
+('11034', 'Hamburg'),
+('21034', 'Hamburg');
+
+INSERT INTO adresse (strasse, stadtplzid) VALUES
+('Hauptstrasse 1', 1),
+('Musterweg 2', 2),
+('Beispielallee 3', 3),
+('Teststrasse 4', 4),
+('Demoweg 5', 5),
+('Erika-Mustermann-Str. 6', 6),
+('Schulstrasse 7', 7),
+('Bahnhofstrasse 8', 1),
+('Hauptbahnhofplatz 9', 2),
+('Hauptbahnhofplatz 11', 11),
+('Hauptbahnhofplatz 139', 12),
+('Kirchweg 10', 10);
+
+INSERT INTO kunde (kundenvorname, kundennachname, telefonnummer, adresseid) VALUES
+('Max', 'Mustermann', '0123456789', 1),
+('Julia', 'Mustermann', '0123356789', 1),
+('Helga', 'Mustermann', '0143356789', 1),
+('Erika', 'Musterfrau', '0234567890', 3),
+('John', 'Doe', '0345678901', 3),
+('Jane', 'Doe', '0456789012', 3),
+('Jane', 'Trainer', '0555789012', 4),
+('Hans', 'Meier', '0567890123', 5),
+('Anna', 'Schmidt', '0678901234', 6),
+('Peter', 'Schulz', '0789012345', 7),
+('Laura', 'Müller', '0890123456', 8),
+('Klaus', 'Becker', '0901234567', 9),
+('Sophie', 'Bauer', '1012345678', 10),
+('Steffen', 'Bernard', '1012345678', 11),
+('Yasmin', 'Milkmann', '134245678', 12),
+('Celine', 'Eisenbahn','02321234554',11);
+
+create table if not exists verlag(
+verlagid int primary key auto_increment,
+verlagsname varchar(250)
+);
+
+create table if not exists buch (
+buchnummer int primary key auto_increment,
+titel varchar(500),
+anschaffungsdatum date,
+verlagid int,
+FOREIGN key(verlagid) REFERENCES verlag(verlagid)
+);
+
+create table if not exists verleihvorgang(
+verleihvorgangid int primary key auto_increment,
+buchnummer int not null,
+kundennummer int not null,
+rueckgabedatum date,
+ausleihdatum date,
+FOREIGN KEY(buchnummer) REFERENCES buch(buchnummer),
+foreign key(kundennummer) References kunde(kundennummer)
+);
+
+insert into verlag(verlagsname) values
+("Sprinegr"),
+("Klett"),
+("Wstermann"),
+("Main"),
+("Addison"),
+("Cambrigde"),
+("O'Reilly Media"),
+("Penguin Random House"),
+("HarperCollins"),
+("Simon & Schuster"),
+("Hachette Livre"),
+("Macmillan Publishers"),
+("Scholastic"),
+("McGraw-Hill Education"),
+("Pearson"),
+("Oxford University Press"),
+("John Wiley & Sons"),
+("Cengage Learning"),
+("Wiley-Blackwell"),
+("Springer Nature"),
+("SAGE Publications"),
+("Elsevier"),
+("Cambridge University Press"),
+("Bloomsbury"),
+("Random House"),
+("Thomson Reuters"),
+("Bertelsmann"),
+("Reed Elsevier"),
+("Taylor & Francis"),
+("Informa"),
+("Grupo Planeta"),
+("Kodansha"),
+("Shogakukan"),
+("Houghton Mifflin Harcourt"),
+("Workman Publishing"),
+("Abrams Books"),
+("Chronicle Books"),
+("F+W Media"),
+("Sterling Publishing"),
+("Zondervan"),
+("Westminster John Knox Press"),
+("Broadman & Holman"),
+("Barbour Publishing"),
+("Abingdon Press"),
+("Harvest House Publishers"),
+("Tyndale House Publishers"),
+("NavPress"),
+("InterVarsity Press"),
+("Baker Publishing Group"),
+("Crossway");
+
+INSERT INTO buch (titel, anschaffungsdatum, verlagid) VALUES
+('Berlin Alexanderplatz', '2022-05-17', 5),
+('Das Boot', '2023-03-20', 17),
+('Das Haus der Treppen', '2023-11-10', 25),
+('Das Muschelessen', '2023-05-22', 35),
+('Der Fremde', '2023-02-09', 35),
+('Der Hauptmann von Köpenick', '2023-12-10', 45),
+('Der Mann ohne Eigenschaften', '2023-04-10', 15),
+('Der Name der Rose', '2021-05-15', 38),
+('Der Prozess', '2022-03-08', 3),
+('Der Räuber Hotzenplotz', '2022-06-30', 39),
+('Der Richter und sein Henker', '2022-03-07', 32),
+('Der Sandmann', '2022-03-05', 12),
+('Der Schwarm', '2023-07-14', 25),
+('Der Schimmelreiter', '2022-05-17', 25),
+('Die Blechtrommel', '2022-02-21', 2),
+('Die Physiker', '2023-11-01', 45),
+('Die unendliche Geschichte', '2023-05-27', 50),
+('Die Verwandlung', '2022-07-29', 8),
+('Die verlorene Ehre der Katharina Blum', '2022-08-19', 41),
+('Die Wand', '2023-04-15', 34),
+('Die Vermessung der Welt', '2021-09-10', 35),
+('Die unendliche Geschichte', '2023-12-09', 44),
+('Die endliche Geschichte', '2023-12-09', 44),
+('Schuld und Sühne', '2023-12-09', 44),
+( 'Ninja', '2023-09-10', 1);
+
+INSERT INTO verleihvorgang (buchnummer, kundennummer, rueckgabedatum, ausleihdatum) VALUES
+(1, 1, '2024-09-01', '2024-08-01'),
+(2, 2, '2024-09-05', '2024-08-05'),
+(3, 3, '2024-09-10', '2024-08-10'),
+(4, 4, '2024-09-15', '2024-08-15'),
+(5, 5, '2024-09-20', '2024-08-20'),
+(6, 6, '2024-09-25', '2024-08-25'),
+(7, 7, '2024-09-30', '2024-08-30'),
+(8, 8, '2024-10-05', '2024-09-05'),
+(9, 9, '2024-10-10', '2024-09-10'),
+(10, 10, '2024-10-15', '2024-09-15');
+
 
 ```
