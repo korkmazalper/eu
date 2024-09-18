@@ -305,7 +305,14 @@ INSERT INTO stadt_plz (plz, stadt) VALUES
 ('99427', 'Weimar'),
 ('01034', 'Hamburg'),
 ('11034', 'Hamburg'),
-('21034', 'Hamburg');
+('21034', 'Hamburg'),
+('54345', 'Kassel'),
+('76532', 'München'),
+('12122', 'Bonn'),
+('67541', 'Euskirchen'),
+('11111', 'Postdam'),
+('07321', 'Jena')
+;
 
 INSERT INTO adresse (strasse, stadtplzid) VALUES
 ('Hauptstrasse 1', 1),
@@ -319,7 +326,10 @@ INSERT INTO adresse (strasse, stadtplzid) VALUES
 ('Hauptbahnhofplatz 9', 2),
 ('Hauptbahnhofplatz 11', 11),
 ('Hauptbahnhofplatz 139', 12),
-('Kirchweg 10', 10);
+('Kirchweg 10', 10),
+('Domstraße 10', 13),
+('Goetheplatz 22', 19),
+('Vollstraße 145', 17);
 
 INSERT INTO kunde (kundenvorname, kundennachname, telefonnummer, adresseid) VALUES
 ('Max', 'Mustermann', '0123456789', 1),
@@ -337,7 +347,12 @@ INSERT INTO kunde (kundenvorname, kundennachname, telefonnummer, adresseid) VALU
 ('Sophie', 'Bauer', '1012345678', 10),
 ('Steffen', 'Bernard', '1012345678', 11),
 ('Yasmin', 'Milkmann', '134245678', 12),
-('Celine', 'Eisenbahn','02321234554',11);
+('Celine', 'Eisenbahn','02321234554',11),
+('Julia', 'Schumacher','02321234554',14),
+('Jasmin', 'Feder','03234222342',15),
+('Hans', 'Eisenbahn','02324234554',13),
+('Stefan', 'Rossman','09875636273',11)
+;
 
 create table if not exists verlag(
 verlagid int primary key auto_increment,
@@ -439,7 +454,9 @@ INSERT INTO buch (titel, anschaffungsdatum, verlagid) VALUES
 ('Die unendliche Geschichte', '2023-12-09', 44),
 ('Die endliche Geschichte', '2023-12-09', 44),
 ('Schuld und Sühne', '2023-12-09', 44),
-( 'Ninja', '2023-09-10', 1);
+( 'Ninja', '2023-09-10', 1),
+( 'Green Mile', '2022-09-09', 43),
+( 'Mein Freund', '2021-08-09', 37);
 
 INSERT INTO verleihvorgang (buchnummer, kundennummer, rueckgabedatum, ausleihdatum) VALUES
 (1, 1, '2024-09-01', '2024-08-01'),
@@ -453,5 +470,25 @@ INSERT INTO verleihvorgang (buchnummer, kundennummer, rueckgabedatum, ausleihdat
 (9, 9, '2024-10-10', '2024-09-10'),
 (10, 10, '2024-10-15', '2024-09-15');
 
+INSERT INTO verleihvorgang (buchnummer, kundennummer, ausleihdatum) VALUES
+(1, 3, '2024-08-01'),
+(4, 2, '2024-08-01'),
+(6, 9, '2024-08-01'),
+(9, 6, '2024-08-01');
+
 
 ```
+
+### Aufgaben
+
+- Zeige alle Kunden aus Berlin sortiert nach Nachnamen
+- Zeige alle Kunden aus allen Städten mit dem Anfangsbuchstaben „B“.
+- Zeige alle Kunden aus Städten mit dem 3. Buchstaben „N“
+- Zeige alle Kunden aus Städten mit dem 2. oder 3. Buchstaben „E“
+- Zeige alle Kunden aus Städten, die mit dem Buchstaben „N“ enden
+- Zeige alle Bücher von Springer (Verlag)
+- Zeige alle Bücher, die im Jahr 2023 gekauft werden
+- Zeige alle Bücher, die im Januar 2023 gekauft werden
+- Zeige alle Bücher, die nach dem 1 Januar 2023 gekauft wurden
+- Zeige alle Kunden, deren Telefonnummer mit '0123' beginnt
+- Zeige die Anzahl der Bücher pro Verlag
