@@ -478,20 +478,6 @@ INSERT INTO verleihvorgang (buchnummer, kundennummer, ausleihdatum) VALUES
 
 ```
 
-#### Aufgaben
-
-- Zeige alle Kunden aus Berlin sortiert nach Nachnamen
-- Zeige alle Kunden aus allen Städten mit dem Anfangsbuchstaben „B“.
-- Zeige alle Kunden aus Städten mit dem 3. Buchstaben „N“
-- Zeige alle Kunden aus Städten mit dem 2. oder 3. Buchstaben „E“
-- Zeige alle Kunden aus Städten, die mit dem Buchstaben „N“ enden
-- Zeige alle Bücher von Springer (Verlag)
-- Zeige alle Bücher, die im Jahr 2023 gekauft werden
-- Zeige alle Bücher, die im Januar 2023 gekauft werden
-- Zeige alle Bücher, die nach dem 1 Januar 2023 gekauft wurden
-- Zeige alle Kunden, deren Telefonnummer mit '0123' beginnt
-- Zeige die Anzahl der Bücher pro Verlag
-
 ### Bibliothek Datenbank v4.0
 
 ```sql
@@ -653,6 +639,7 @@ INSERT INTO author (authorname, authorvorname, aelter) VALUES
 create table if not exists buch (
 buchnummer int primary key auto_increment,
 titel varchar(500),
+seiteanzahl int,
 anschaffungsdatum date,
 preis DECIMAL(10,2),
 verlagid int,
@@ -723,34 +710,41 @@ insert into verlag(verlagsname) values
 ("Baker Publishing Group"),
 ("Crossway");
 
-INSERT INTO buch (titel, anschaffungsdatum,preis, verlagid, authorid) VALUES
-('Berlin Alexanderplatz', '2022-05-17', 22.99, 5,1),
-('Das Boot', '2023-03-20',14.49, 17,3),
-('Das Haus der Treppen', '2023-11-10',22.85, 25,5),
-('Das Muschelessen', '2023-05-22', 45.89, 35,7),
-('Der Fremde', '2023-02-09', 42.45, 35,9),
-('Der Hauptmann von Köpenick', '2023-12-10',17.99, 45,11),
-('Der Mann ohne Eigenschaften', '2023-04-10', 34.55, 15,13),
-('Der Name der Rose', '2021-05-15', 56.50,38,15),
-('Der Prozess', '2019-03-08', 55.99,3,15),
-('Der Räuber Hotzenplotz', '2024-06-30',32.99, 39,19),
-('Der Richter und sein Henker', '2022-03-07', 31.99, 32,22),
-('Der Sandmann', '2022-03-05', 22.50,12,23),
-('Der Schwarm', '2023-07-14', 24.99,25,25),
-('Der Schimmelreiter', '2022-05-17',17.99, 25,29),
-('Die Blechtrommel', '2022-02-21', 15.50,2,33),
-('Die Physiker', '2023-11-01', 15.99,45,34),
-('Die unendliche Geschichte', '2023-05-27',21.00, 50,37),
-('Die Verwandlung', '2022-07-29',24.99, 8,41),
-('Die verlorene Ehre der Katharina Blum', '2022-08-19',19.99, 41,43),
-('Die Wand', '2023-04-15', 29.99,34,37),
-('Die Vermessung der Welt', '2021-09-10',23.99, 35,47),
-('Die unendliche Geschichte', '2023-12-09',16.75, 44,47),
-('Die endliche Geschichte', '2023-12-09', 15.99,44,7),
-('Schuld und Sühne', '2023-12-09',44.99, 44,5),
-( 'Ninja', '2023-09-10',78.99, 1,9),
-( 'Green Mile', '2022-09-09',66.88, 43,11),
-( 'Mein Freund', '2021-08-09',75.50, 37,13);
+INSERT INTO buch (titel, anschaffungsdatum,preis, verlagid, authorid, seiteanzahl) VALUES
+('Berlin Alexanderplatz', '2022-05-17', 22.99, 5,1,321),
+('Das Boot', '2023-03-20',14.49, 17,3,456),
+('Das Haus der Treppen', '2023-11-10',22.85, 25,5,665),
+('Das Muschelessen', '2023-05-22', 45.89, 35,7,234),
+('Der Fremde', '2023-02-09', 42.45, 35,9,254),
+('Der Hauptmann von Köpenick', '2023-12-10',17.99, 45,11,233),
+('Der Mann ohne Eigenschaften', '2023-04-10', 34.55, 15,13,187),
+('Der Name der Rose', '2021-05-15', 56.50,38,15,198),
+('Der Prozess', '2019-03-08', 55.99,3,15,222),
+('Der Räuber Hotzenplotz', '2024-06-30',32.99, 39,19,432),
+('Der Richter und sein Henker', '2022-03-07', 31.99, 32,22,342),
+('Der Sandmann', '2022-03-05', 22.50,12,23,441),
+('Der Schwarm', '2023-07-14', 24.99,25,25,278),
+('Der Schimmelreiter', '2022-05-17',17.99, 25,29,187),
+('Die Blechtrommel', '2022-02-21', 15.50,2,33,78),
+('Die Physiker', '2023-11-01', 15.99,45,34,51),
+('Die unendliche Geschichte', '2023-05-27',21.00, 50,37,209),
+('Die Verwandlung', '2022-07-29',24.99, 8,41,387),
+('Die verlorene Ehre der Katharina Blum', '2022-08-19',19.99, 41,43,321),
+('Die Wand', '2023-04-15', 29.99,34,37,365),
+('Die Vermessung der Welt', '2021-09-10',23.99, 35,47,333),
+('Die unendliche Geschichte', '2023-12-09',16.75, 44,47,365),
+('Die endliche Geschichte', '2023-12-09', 15.99,44,7,321),
+('Schuld und Sühne', '2023-12-09',44.99, 44,5,300),
+( 'Ninja', '2023-09-10',78.99, 1,9,312),
+( 'Green Mile', '2022-09-09',66.88, 43,11,409),
+( 'Mein Freund', '2021-08-09',75.50, 37,13,298),
+('Der Zauberberg', 720, '2022-01-15', 29.99, 1, 1),
+('Faust', 528, '2021-05-20', 19.99, 2, 2),
+('Steppenwolf', 310, '2020-11-10', 24.99, 3, 4),
+('Siddhartha', 152, '2018-08-12', 12.99, 3, 4)('Mutter Courage und ihre Kinder', 160, '2023-07-22', 12.40, 3, 7),
+('Kassandra', 231, '2023-08-30', 16.50, 2, 8),
+('Das Parfum', 255, '2023-09-15', 17.80, 1, 9);
+
 
 INSERT INTO verleihvorgang (buchnummer, kundennummer, rueckgabedatum, ausleihdatum) VALUES
 (1, 1, '2024-09-01', '2024-08-01'),
@@ -771,3 +765,17 @@ INSERT INTO verleihvorgang (buchnummer, kundennummer, ausleihdatum) VALUES
 (9, 6, '2024-08-01');
 
 ```
+
+#### Aufgaben
+
+- Zeige alle Kunden aus Berlin sortiert nach Nachnamen
+- Zeige alle Kunden aus allen Städten mit dem Anfangsbuchstaben „B“.
+- Zeige alle Kunden aus Städten mit dem 3. Buchstaben „N“
+- Zeige alle Kunden aus Städten mit dem 2. oder 3. Buchstaben „E“
+- Zeige alle Kunden aus Städten, die mit dem Buchstaben „N“ enden
+- Zeige alle Bücher von Springer (Verlag)
+- Zeige alle Bücher, die im Jahr 2023 gekauft werden
+- Zeige alle Bücher, die im Januar 2023 gekauft werden
+- Zeige alle Bücher, die nach dem 1 Januar 2023 gekauft wurden
+- Zeige alle Kunden, deren Telefonnummer mit '0123' beginnt
+- Zeige die Anzahl der Bücher pro Verlag
