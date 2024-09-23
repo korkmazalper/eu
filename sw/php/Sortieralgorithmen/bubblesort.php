@@ -1,9 +1,9 @@
 <?php
 
-function swap(&$x, $k) {
-    $temp = $x[$k];
-    $x[$k] = $x[$k+1];
-    $x[$k+1] = $temp;
+function swap(&$arr, $k, $l) {
+    $temp = $arr[$k];
+    $arr[$k] = $arr[$l];
+    $arr[$l] = $temp;
 }
 
 
@@ -12,7 +12,7 @@ function bubbleSort(&$x) {
     for ($i = 0; $i < $length - 1; $i++) {
         for ($j = 0; $j < $length - $i - 1; $j++) {
             if ($x[$j] > $x[$j + 1]) {
-                swap($x, $j);
+                swap($x, $j,$j+1);
             }
             // echo json_encode($x) .  "\n\n";
         }

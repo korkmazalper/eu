@@ -1,6 +1,6 @@
 # Minsort Algorithmus
 
-##
+## Funktion zur Erstellung eines Arrays, dessen Elemente eindeutig sind
 
 Schreiben Sie eine PHP-Funktion, die ein Array mit zufälligen Ganzzahlen erstellt und zurückgibt, dessen Elemente eindeutig sind und die Länge und den Bereich der als Parameter übergebenen Zahlen haben.
 
@@ -21,9 +21,12 @@ Nehmen wir ein Array mit 5 Elementen als Beispiel:
 
 1. Suche das kleinste Element:
 
+Wir gehen davon aus, dass das erste Element im Array das kleinste Element ist.
+
 Wir durchsuchen das gesamte Array und finden die kleinste Zahl. In unserem Beispiel ist das die 1.
 
 2. Tausche das kleinste Element:
+
    Wir tauschen die 1 mit dem ersten Element (der 5) im Array.
    Das Array sieht jetzt so aus: `[1, 2, 4, 5, 3]`
 

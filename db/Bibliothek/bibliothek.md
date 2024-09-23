@@ -738,12 +738,13 @@ INSERT INTO buch (titel, anschaffungsdatum,preis, verlagid, authorid, seiteanzah
 ( 'Ninja', '2023-09-10',78.99, 1,9,312),
 ( 'Green Mile', '2022-09-09',66.88, 43,11,409),
 ( 'Mein Freund', '2021-08-09',75.50, 37,13,298),
-('Der Zauberberg', 720, '2022-01-15', 29.99, 1, 1),
-('Faust', 528, '2021-05-20', 19.99, 2, 2),
-('Steppenwolf', 310, '2020-11-10', 24.99, 3, 4),
-('Siddhartha', 152, '2018-08-12', 12.99, 3, 4)('Mutter Courage und ihre Kinder', 160, '2023-07-22', 12.40, 3, 7),
-('Kassandra', 231, '2023-08-30', 16.50, 2, 8),
-('Das Parfum', 255, '2023-09-15', 17.80, 1, 9);
+('Der Zauberberg', '2022-01-15', 29.99, 1, 1, 720),
+('Faust', '2021-05-20', 19.99, 2, 2, 528),
+('Steppenwolf', '2020-11-10', 24.99, 3, 4, 310),
+('Siddhartha', '2018-08-12', 12.99, 3, 4, 152),
+('Mutter Courage und ihre Kinder', '2023-07-22', 12.40, 3, 7, 160),
+('Kassandra', '2023-08-30', 16.50, 2, 8, 231),
+('Das Parfum', '2023-09-15', 17.80, 1, 9, 255);
 
 
 INSERT INTO verleihvorgang (buchnummer, kundennummer, rueckgabedatum, ausleihdatum) VALUES
@@ -766,16 +767,4 @@ INSERT INTO verleihvorgang (buchnummer, kundennummer, ausleihdatum) VALUES
 
 ```
 
-#### Aufgaben
 
-- Zeige alle Kunden aus Berlin sortiert nach Nachnamen
-- Zeige alle Kunden aus allen Städten mit dem Anfangsbuchstaben „B“.
-- Zeige alle Kunden aus Städten mit dem 3. Buchstaben „N“
-- Zeige alle Kunden aus Städten mit dem 2. oder 3. Buchstaben „E“
-- Zeige alle Kunden aus Städten, die mit dem Buchstaben „N“ enden
-- Zeige alle Bücher von Springer (Verlag)
-- Zeige alle Bücher, die im Jahr 2023 gekauft werden
-- Zeige alle Bücher, die im Januar 2023 gekauft werden
-- Zeige alle Bücher, die nach dem 1 Januar 2023 gekauft wurden
-- Zeige alle Kunden, deren Telefonnummer mit '0123' beginnt
-- Zeige die Anzahl der Bücher pro Verlag
