@@ -157,3 +157,116 @@ formatiert an.
 - Die HTML-Tags `<sub >` und `<sup >` dienen dazu, Text innerhalb eines Elements entweder tiefzustellen (Subskript) oder hochzustellen (Superskript). Diese Formatierung ist besonders nützlich für:
 - Mathematische Ausdrücke: z.B. x², A³
 - Chemische Formeln: z.B. H₂O.
+
+## HTML- Attribute
+
+HTML-Attribute liefern zusätzliche Informationen zu HTML-Elementen.
+
+- Alle HTML-Elemente können **Attribute haben**
+- Attribute liefern **zusätzliche Informationen** über Elemente
+- Attribute werden **_immer_** **im Starttag** angegeben
+- Attribute kommen normalerweise in **Name/Wert-Paaren** vor, wie: name="value"
+
+### Das href-Attribut
+
+Das `<a>` Tag definiert einen Hyperlink. Das `href` Attribut gibt die URL der Seite an, auf die der Link verweist:
+
+```html
+<a href="https://www.google.de">Google</a>
+```
+
+### Das src-Attribut
+
+Der `<img>` Tag dient dazu, ein Bild in eine HTML-Seite einzubetten. Das `src` Attribut gibt den Pfad zum anzuzeigenden Bild an:
+
+```html
+<img src="./img/bird.jpg" />
+```
+
+Es gibt zwei Möglichkeiten, die URL im Attribut anzugeben `src` :
+
+1. **Absolute URL** – Links zu einem externen Bild, das auf einer anderen Website gehostet wird.
+   Beispiel:
+
+```html
+<img
+  src="https://plus.unsplash.com/premium_photo-1675714692342-01dfd2e6b6b5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+/>
+```
+
+2. Relative URL – Links zu einem Bild, das auf der Website gehostet wird. Hier enthält die URL nicht den Domänennamen. Wenn die URL ohne Schrägstrich beginnt, ist sie relativ zur aktuellen Seite.
+
+```html
+<img src="./img/bird.jpg" />
+```
+
+### Die Breite und Höhe Attribute
+
+Das `<img>`Tag sollte außerdem die Attribute widthund enthalten height, die die Breite und Höhe des Bildes (in Pixeln) angeben.
+
+```html
+<img src="./img/bird.jpg" width="500" height="600" />
+```
+
+### Das alt-Attribut
+
+Das erforderliche altAttribut für den `<img>` Tag gibt einen alternativen Text für ein Bild an, wenn das Bild aus irgendeinem Grund nicht angezeigt werden kann. Dies kann an einer langsamen Verbindung, einem Fehler im `src` Attribut oder daran liegen, dass der Benutzer einen Screenreader verwendet.
+
+```html
+<img src="./img/bird.jpg" width="500" height="600" alt="Vogel" />
+```
+
+### Das style-Attribut
+
+Mit dem `style` Attribut können Sie die Breite und Höhe eines Bildes festlegen.
+
+```html
+<img
+  src="./img/bird.jpg"
+  width="500"
+  height="600"
+  alt="Vogel"
+  style="width:150px;height:200px"
+/>
+```
+
+Die Attribute `width` und `height` definieren immer die Breite und Höhe des Bildes in Pixeln.
+
+### Breite und Höhe oder Style?
+
+Die Attribute width, height, und style sind alle in HTML gültig. ``style` verhindert, dass Stylesheets die Größe von Bildern ändern.
+
+### Bild als Link
+
+Um ein Bild als Link zu verwenden, fügen Sie das `<img>` Tag in das `<a>` Tag ein:
+
+```html
+<a href="https://www.google.de">
+  <img
+    src="./img/bird.jpg"
+    width="500"
+    height="600"
+    alt="Vogel"
+    style="width:150px;height:200px"
+  />
+</a>
+```
+
+### Bild Floating
+
+Verwenden Sie die `float` Eigenschaft, um das Bild rechts oder links neben einem Text schweben zu lassen:
+
+```html
+<p>
+  <img
+    src="./img/bird.jpg"
+    style="float:right;width:42px;height:42px;"
+  />
+  Das Bild wird rechts neben dem Text angezeigt.
+</p>
+
+<p>
+  <img src="./img/bird.jpg" style="float:left;width:42px;height:42px;" />
+  Das Bild wird links neben dem Text angezeigt.
+</p>
+```
