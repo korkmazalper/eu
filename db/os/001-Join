@@ -14,198 +14,62 @@
 - Zeige die Anzahl der Bücher pro Verlag
 
 #### Abfragen Gruppe II - JOIN
+
 1. Welche Bücher wurden von Autoren geschrieben, die älter als 40 Jahre sind?
-
-```sql
-SELECT * FROM buch JOIN author ON buch.authorid = author.authorid WHERE author.aelter > 40;
-
-```
 
 2. Welche Kunden haben Bücher ausgeliehen, die nach dem 1. Januar 2023 angeschafft wurden?
 
-```sql
-SELECT * FROM kunde JOIN verleihvorgang ON kunde.kundennummer = verleihvorgang.kundennummer JOIN buch ON verleihvorgang.buchnummer = buch.buchnummer WHERE buch.anschaffungsdatum > '2023-01-01';
-
-```
-
 3. Welche Bücher von Verlagen mit dem Namen 'Springer' kosten mehr als 30 Euro?
-
-```sql
-SELECT * FROM buch JOIN verlag ON buch.verlagid = verlag.verlagid WHERE verlag.verlagsname = 'Springer' AND buch.preis > 30;
-
-```
 
 4. Welche Verleihvorgänge wurden von Kunden mit Nachnamen, die mit 'M' beginnen, ausgeführt?
 
-```sql
-SELECT * FROM verleihvorgang JOIN kunde ON verleihvorgang.kundennummer = kunde.kundennummer WHERE kunde.kundennachname LIKE 'M%';
-
-```
-
 5. Welche Bücher mit mehr als 300 Seiten wurden nach dem 1. Januar 2023 angeschafft?
-
-```sql
-SELECT * FROM buch WHERE seiteanzahl > 300 AND anschaffungsdatum > '2023-01-01';
-
-```
 
 6. Welche Autoren haben Bücher geschrieben, die weniger als 20 Euro kosten und wie lauten diese Bücher aufsteigend nach dem Titel geordnet?
 
-```sql
-SELECT * FROM buch JOIN author ON buch.authorid = author.authorid WHERE buch.preis < 20 ORDER BY buch.titel ASC;
-
-```
 
 7. Welche Verlage haben Bücher veröffentlicht, die nach dem 1. Januar 2023 angeschafft wurden?
 
-```sql
-SELECT * FROM verlag JOIN buch ON verlag.verlagid = buch.verlagid WHERE buch.anschaffungsdatum > '2023-01-01';
-
-```
 
 8. Welche Kunden haben Bücher mit dem Titel 'Geschichte' ausgeliehen?
 
-```sql
-SELECT * FROM kunde JOIN verleihvorgang ON kunde.kundennummer = verleihvorgang.kundennummer JOIN buch ON verleihvorgang.buchnummer = buch.buchnummer WHERE buch.titel LIKE '%Geschichte%';
-
-```
 
 9. Welche Verleihvorgänge wurden von Kunden mit der Stadt-PLZ-ID 1 ausgeführt?
 
-```sql
-SELECT * FROM verleihvorgang JOIN kunde ON verleihvorgang.kundennummer = kunde.kundennummer JOIN adresse ON kunde.adresseid = adresse.adresseid WHERE adresse.stadtplzid = 1;
-
-```
-
 10. Welche Bücher von Autoren, die älter als 50 Jahre sind, kosten weniger als 25 Euro?
-
-```sql
-SELECT * FROM buch JOIN author ON buch.authorid = author.authorid WHERE author.aelter > 50 AND buch.preis < 25;
-
-```
 
 11. Welche Kunden mit einer Telefonnummer haben Bücher ausgeliehen, die nach dem 1. Januar 2023 angeschafft wurden?
 
-```sql
-SELECT * FROM kunde JOIN verleihvorgang ON kunde.kundennummer = verleihvorgang.kundennummer JOIN buch ON verleihvorgang.buchnummer = buch.buchnummer WHERE kunde.telefonnummer IS NOT NULL AND buch.anschaffungsdatum > '2023-01-01';
-
-```
-
 12. Welche Verleihvorgänge wurden von Kunden ausgeführt, die in der Stadt 'Köln' wohnen?
-
-```sql
-SELECT * FROM verleihvorgang JOIN kunde ON verleihvorgang.kundennummer = kunde.kundennummer JOIN adresse ON kunde.adresseid = adresse.adresseid JOIN stadt_plz ON adresse.stadtplzid = stadt_plz.stadtplzid WHERE stadt_plz.stadt = 'Köln';
-
-```
 
 13. Welche Bücher von Verlagen mit 'Media' im Namen wurden nach dem 1. Januar 2023 angeschafft?
 
-```sql
-SELECT * FROM buch JOIN verlag ON buch.verlagid = verlag.verlagid WHERE verlag.verlagsname LIKE '%Media%' AND buch.anschaffungsdatum > '2023-01-01';
-
-```
-
 14. Welche Kunden haben Bücher mit mehr als 400 Seiten ausgeliehen?
-
-```sql
-SELECT * FROM kunde JOIN verleihvorgang ON kunde.kundennummer = verleihvorgang.kundennummer JOIN buch ON verleihvorgang.buchnummer = buch.buchnummer WHERE buch.seiteanzahl > 400;
-
-```
 
 15. Welche Autoren haben Bücher veröffentlicht, die weniger als 20 Euro kosten und nach dem 1. Januar 2023 angeschafft wurden?
 
-```sql
-SELECT * FROM author JOIN buch ON author.authorid = buch.authorid WHERE buch.preis < 20 AND buch.anschaffungsdatum > '2023-01-01';
-
-```
-
 16. Welche Verleihvorgänge wurden von Kunden mit dem Vornamen 'Jane' ausgeführt?
-
-```sql
-SELECT * FROM verleihvorgang JOIN kunde ON verleihvorgang.kundennummer = kunde.kundennummer WHERE kunde.kundenvorname = 'Jane';
-
-```
 
 17. Welche Bücher von Verlagen mit dem Namen 'Springer' wurden von Kunden mit Nachnamen, die mit 'S' beginnen, ausgeliehen?
 
-```sql
-SELECT * FROM buch JOIN verlag ON buch.verlagid = verlag.verlagid JOIN verleihvorgang ON buch.buchnummer = verleihvorgang.buchnummer JOIN kunde ON verleihvorgang.kundennummer = kunde.kundennummer WHERE verlag.verlagsname = 'Springer' AND kunde.kundennachname LIKE 'S%';
-
-```
-
 18. Welche Verleihvorgänge wurden von Kunden mit einer Telefonnummer ausgeführt, die Bücher mit dem Titel 'Geschichte' ausgeliehen haben?
-
-```sql
-SELECT * FROM verleihvorgang JOIN kunde ON verleihvorgang.kundennummer = kunde.kundennummer JOIN buch ON verleihvorgang.buchnummer = buch.buchnummer WHERE kunde.telefonnummer IS NOT NULL AND buch.titel LIKE '%Geschichte%';
-
-```
 
 19. Welche Bücher von Autoren, die jünger als 35 Jahre sind, kosten mehr als 50 Euro?
 
-```sql
-SELECT * FROM buch JOIN author ON buch.authorid = author.authorid WHERE author.aelter < 35 AND buch.preis > 50;
-
-```
-
 20. Welche Kunden haben Bücher ausgeliehen, die von Autoren geschrieben wurden, die älter als 60 Jahre sind?
-
-```sql
-SELECT * FROM kunde JOIN verleihvorgang ON kunde.kundennummer = verleihvorgang.kundennummer JOIN buch ON verleihvorgang.buchnummer = buch.buchnummer JOIN author ON buch.authorid = author.authorid WHERE author.aelter > 60;
-
-```
 
 21. Welche Verleihvorgänge wurden von Kunden ausgeführt, die Bücher von Verlagen mit 'Media' im Namen ausgeliehen haben?
 
-```sql
-SELECT * FROM verleihvorgang JOIN kunde ON verleihvorgang.kundennummer = kunde.kundennummer JOIN buch ON verleihvorgang.buchnummer = buch.buchnummer JOIN verlag ON buch.verlagid = verlag.verlagid WHERE verlag.verlagsname LIKE '%Media%';
-
-```
-
 22. Welche Bücher von Autoren, die älter als 45 Jahre sind, kosten weniger als 15 Euro und wie lauten diese aufsteigend nach dem Titel geordnet?
-
-```sql
-SELECT * FROM buch JOIN author ON buch.authorid = author.authorid WHERE author.aelter > 45 AND buch.preis < 15 ORDER BY buch.titel ASC;
-
-```
 
 23. Welche Kunden mit Nachnamen, die mit 'M' beginnen, haben Bücher ausgeliehen, die nach dem 1. Januar 2023 angeschafft wurden?
 
-```sql
-SELECT * FROM kunde JOIN verleihvorgang ON kunde.kundennummer = verleihvorgang.kundennummer JOIN buch ON verleihvorgang.buchnummer = buch.buchnummer WHERE kunde.kundennachname LIKE 'M%' AND buch.anschaffungsdatum > '2023-01-01';
-
-```
-
 24. Welche Verleihvorgänge wurden von Kunden ausgeführt, die Bücher mit mehr als 500 Seiten ausgeliehen haben?
-
-```sql
-SELECT * FROM verleihvorgang JOIN kunde ON verleihvorgang.kundennummer = kunde.kundennummer JOIN buch ON verleihvorgang.buchnummer = buch.buchnummer WHERE buch.seiteanzahl > 500;
-
-```
 
 25. Welche Bücher von Verlagen mit dem Namen 'Springer' kosten weniger als 25 Euro und wie lauten diese absteigend nach dem Preis geordnet?
 
-```sql
-SELECT * FROM buch JOIN verlag ON buch.verlagid = verlag.verlagid WHERE verlag.verlagsname = 'Springer' AND buch.preis < 25 ORDER BY buch.preis DESC;
-
-```
-
 26. Welche Kunden haben Bücher ausgeliehen, die von Autoren geschrieben wurden, die jünger als 40 Jahre sind und wie lauten diese Verleihvorgänge aufsteigend nach dem Ausleihdatum geordnet?
-
-```sql
-SELECT * FROM kunde JOIN verleihvorgang ON kunde.kundennummer = verleihvorgang.kundennummer JOIN buch ON verleihvorgang.buchnummer = buch.buchnummer JOIN author ON buch.authorid = author.authorid WHERE author.aelter < 40 ORDER BY verleihvorgang.ausleihdatum ASC;
-
-```
 
 27. Welche Verleihvorgänge wurden von Kunden ausgeführt, die in Adressen mit 'Haupt' in der Straße wohnen?
 
-```sql
-SELECT * FROM verleihvorgang JOIN kunde ON verleihvorgang.kundennummer = kunde.kundennummer JOIN adresse ON kunde.adresseid = adresse.adresseid WHERE adresse.strasse LIKE '%Haupt%';
-
-```
-
 28. Welche Bücher von Verlagen mit 'Media' im Namen wurden nach dem 1. Januar 2023 angeschafft und wie lauten diese aufsteigend nach dem Anschaffungsdatum geordnet?
-
-```sql
-SELECT * FROM buch JOIN verlag ON buch.verlagid = verlag.verlagid WHERE verlag.verlagsname LIKE '%Media%' AND buch.anschaffungsdatum > '2023-01
-
-```
