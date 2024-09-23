@@ -124,7 +124,7 @@ ORDER BY kundennachname DESC, kundenvorname ASC;
 
 6. Welche Adressen enthalten 'Haupt' in der Straße?
 
-7. Welche Verlage haben den Namen 'Springer'?
+7. Welche Verlage haben den Namen 'Elsevier'?
 
 8. Welche Verleihvorgänge haben ein Ausleihdatum nach dem 10. August 2024?
 
