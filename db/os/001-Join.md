@@ -74,6 +74,22 @@
 
 #### Abfragen Gruppe III - LEFT JOIN - RIGHT JOIN
 
-#### Abfragen Gruppe IV - GROUP BY, AVG, SUM, MAX, MIN
+1. Liste alle Kunden und ihre Adressen, auch wenn keine Adresse zugewiesen ist.
+2. Liste alle Kunden und ihre Verleihvorgänge, auch wenn sie keine Bücher ausgeliehen haben.
+3. Liste alle Autoren und ihre Bücher, auch wenn sie keine Bücher geschrieben haben.
+4. Liste alle Verlage und die Bücher, die sie veröffentlicht haben, auch wenn sie keine Bücher veröffentlicht haben.
+5. Liste alle Verlage und die Anzahl der Bücher, die sie veröffentlicht haben, auch wenn sie keine Bücher veröffentlicht haben.
+6. Liste alle Verlage und die Bücher, die sie veröffentlicht haben, auch wenn der Verlag keine Bücher veröffentlicht hat.
+   7.Liste alle Adressen und die Städte, in denen sie sich befinden, auch wenn keine Adresse in der Stadt vorhanden ist.
+
+#### Abfragen Gruppe IV - GROUP BY, AVG, SUM, MAX, MIN, COUNT
+
+1. Zeige die Anzahl der Kunden pro Stadt
+2. Liste Durchschnittsalter der Autoren
+3. Liste Durchschnittsalter der Autoren pro Verlag
+4. Liste maximale, minimale und durchschnittliche Anzahl von Seiten pro Verlag
+5. Liste Gesamtkosten der Bücher pro Verlag
+6. Liste Durchschnittspreis der Bücher pro Autor (Füge Vorname und Nachname zusammen, z.B. Max Mustermann in einer Spalte als 'Kunde')
+7. Liste maximale und minimale Buchpreise pro Verlag
 
 ####
