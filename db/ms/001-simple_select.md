@@ -55,7 +55,7 @@ where anschaffungsdatum>"2023-01-01";
 
 ```
 
-- Die folgenden Operatoren können in der WHEREKlausel verwendet werden:
+- Die folgenden Operatoren können in der `WHERE` Klausel verwendet werden:
 
 | Smbol   | Anlam                                                  |
 | ------- | ------------------------------------------------------ |
@@ -108,9 +108,7 @@ ORDER BY kundennachname DESC, kundenvorname ASC;
 
 ```
 
-### Aufgabe (Bibliothek v4.0)
-
-#### Bibliothek v4.0 Fragen -> [Bibliothek Datenbank v4.0 SQL-Script](../Bibliothek/bibliothek.md)
+### Aufgabe [Bibliothek Datenbank v4.0 SQL-Script](../Bibliothek/bibliothek.md)
 
 1. Welche Kunden haben den Vornamen 'Max'?
 
@@ -170,3 +168,135 @@ ORDER BY kundennachname DESC, kundenvorname ASC;
 
 29. Welche Verleihvorgänge haben ein Rückgabedatum ab dem 1. September 2024 und wie lauten diese absteigend nach dem Rückgabedatum geordnet?
 30. Welche Bücher kosten 20 Euro oder weniger und wie lauten diese aufsteigend nach dem Titel geordnet?
+
+## `AND`, `OR`, `NOT` Operatoren
+
+### `AND` und `OR`
+
+Die `WHERE` Klausel kann einen oder mehrere `AND` oder `OR` Operatoren enthalten.
+
+Die beiden Operatoren werden verwendet, um Datensätze basierend auf mehr als einer Bedingung zu filtern.
+
+```sql
+SELECT * from kunde
+where kundenvorname = "Max"
+AND kundennachname = "Mustermann";
+```
+
+### `NOT`
+
+Der `NOT` Operator wird in Kombination mit anderen Operatoren verwendet, um das entgegengesetzte Ergebnis zu erzielen, das auch als negatives Ergebnis bezeichnet wird.
+
+```sql
+SELECT *
+FROM kunde
+where not kundenvorname="Max";
+```
+
+Diese SQL-Anweisung kann auch wie folgt geschrieben werden:
+
+```sql
+SELECT *
+FROM kunde
+where kundenvorname!="Max";
+
+```
+
+oder
+
+```sql
+SELECT *
+FROM kunde
+where kundenvorname<>"Max";
+
+```
+
+### NULL
+
+Ein Feld mit einem `NULL`-Wert ist ein Feld ohne Wert.
+
+Wenn ein Feld in einer Tabelle optional ist, ist es möglich, einen neuen Datensatz einzufügen oder einen Datensatz zu aktualisieren, ohne diesem Feld einen Wert hinzuzufügen. Dann wird das Feld mit einem `NULL`-Wert gespeichert.
+
+**Hinweis**: Ein `NULL`-Wert unterscheidet sich von einem `Nullwert` oder einem Feld, das Leerzeichen enthält. Ein Feld mit einem `NULL`-Wert ist ein Feld, das bei der Datensatzerstellung leer gelassen wurde!
+
+#### NULL - CHECK
+
+- Es ist nicht möglich, mit Vergleichsoperatoren wie =, < oder <> auf `NULL`-Werte zu testen.
+- Wir müssen stattdessen die Operatoren `IS NULL` und verwenden `IS NOT NULL`.
+
+```sql
+SELECT spalte1, spalte2,...
+FROM tabellenname
+WHERE spalteX IS NOT NULL;
+
+```
+
+##### Der `IS NULL` und `IS NOT NULL`
+
+Der `IS NULL`Operator wird zum Testen auf leere Werte (`NULL`-Werte) verwendet.
+
+```sql
+SELECT \*
+FROM verleihvorgang v
+where v.rueckgabedatum IS NULL;
+
+```
+
+## Platzhalterzeichen
+
+- Ein Platzhalterzeichen wird verwendet, um ein oder mehrere Zeichen in einer Zeichenfolge zu ersetzen.
+
+- Mit dem Operator `LIKE` werden Platzhalterzeichen verwendet . Der Operator `LIKE` wird in einer Klausel verwendet, um in einer Spalte nach einem angegebenen Muster zu suchen.
+
+```sql
+SELECT *
+FROM stadt_plz
+WHERE stadt LIKE "B%";
+
+```
+
+### Verwenden des `%`-Platzhalters
+
+Das `%` Platzhalterzeichen steht für eine beliebige Anzahl von Zeichen, auch für null Zeichen.
+
+- Liste der Städte mit dem Buchstaben „e“ in ihnen
+
+```sql
+SELECT *
+FROM stadt_plz
+WHERE stadt LIKE "%e%";
+
+```
+
+### Verwenden des Platzhalters `_`
+
+Das `_` Platzhalterzeichen steht für ein einzelnes Zeichen. Es kann sich um ein beliebiges Zeichen oder eine beliebige Zahl handeln, aber jedes `_` stellt genau ein Zeichen dar.
+
+- Liste aller Städte mit 6 Buchstaben mit dem zweiten Buchstaben „e“.
+
+```sql
+SELECT *
+FROM stadt_plz
+WHERE stadt LIKE "_e____";
+
+```
+
+### Platzhalter kombinieren
+
+Alle Platzhalterzeichen, beispielsweise `%` und `_` , können in Kombination mit anderen Platzhaltern verwendet werden.
+
+```sql
+SELECT *
+FROM stadt_plz
+WHERE stadt LIKE "_e%";
+
+```
+
+- Gibt alle Städte zurück, die mit „b“ beginnen und mindestens 5 Zeichen lang sind:
+
+```sql
+SELECT *
+FROM stadt_plz
+WHERE stadt LIKE "b____%";
+
+```
