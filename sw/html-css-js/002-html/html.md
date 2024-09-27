@@ -103,7 +103,7 @@ Mit dem `meta`-Tag können Sie auch den Zeichensatz der Seite festlegen
 - Ein HTML-Element wird durch ein Start-Tag Inhalt und ein End-Tag definiert:
   `< tagname >` **_Hier kommt der Inhalthin_**`< /tagname >`.
 
-\* **Hinweis**: Manche HTML-Elemente haben keinen Inhalt (wie das `<br />`-Element). Diese Elemente werden als leere Elemente bezeichnet. Leere Elemente haben kein End-Tag.
+  **Hinweis**: Manche HTML-Elemente haben keinen Inhalt (wie das `<br />`-Element). Diese Elemente werden als leere Elemente bezeichnet. Leere Elemente haben kein End-Tag.
 
 ## HTML-Überschriften
 
@@ -258,10 +258,7 @@ Verwenden Sie die `float` Eigenschaft, um das Bild rechts oder links neben einem
 
 ```html
 <p>
-  <img
-    src="./img/bird.jpg"
-    style="float:right;width:42px;height:42px;"
-  />
+  <img src="./img/bird.jpg" style="float:right;width:42px;height:42px;" />
   Das Bild wird rechts neben dem Text angezeigt.
 </p>
 
