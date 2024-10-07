@@ -129,8 +129,7 @@ HTML-Elemente können verschachtelt sein (das heißt, Elemente können andere El
 ## Leere HTML-Elemente
 
 - HTML-Elemente ohne Inhalt werden
-  als leere Elemente bezeichnet. - Das `<br />` Tag definiert
-  einen **Zeilenumbruch**.
+  als leere Elemente bezeichnet. - Das `<br />` Tag definiert einen **Zeilenumbruch**.
 
 ## HTML-Tags für Formatierungen
 

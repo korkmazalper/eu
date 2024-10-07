@@ -59,13 +59,13 @@ where anschaffungsdatum>"2023-01-01";
 
 | Smbol   | Anlam                                                  |
 | ------- | ------------------------------------------------------ |
-| \=      | Gleich                                                 |
-| '>      | Größer als                                             |
-| <       | Kleiner als                                            |
-| >=      | Größer als oder gleich                                 |
-| <=      | Kleiner als oder gleich                                |
-| <>      | Nicht gleich                                           |
-| !=      | Nicht gleich                                           |
+| $$=$$      | Gleich                                                 |
+|  $$>$$      | Größer als                                             |
+| $$<$$       | Kleiner als                                            |
+| $$>=$$      | Größer als oder gleich                                 |
+| $$<=$$  | Kleiner als oder gleich                                |
+| $$<>$$  | Nicht gleich                                           |
+| $$!=$$  | Nicht gleich                                           |
 | BETWEEN | Zwischen einem bestimmten Bereich \*                   |
 | LIKE    | Suche nach einem Muster \*                             |
 | IN      | Um mehrere mögliche Werte für eine Spalte anzugeben \* |

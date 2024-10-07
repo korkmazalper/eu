@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<button id="ampelStart">start</button>
-<button id="ampelStopp">stopp</button>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
 
-<br><br><br><br>
-
-<div id="ampel">
-  <div id="lampeRot"></div>
-  <div id="lampeGelb"></div>
-  <div id="lampeGruen"></div>
-</div>
+    
+		<button id="ampelStart">start</button>
+		<button id="ampelStopp">stopp</button>
 
 
-<script>
-const radius = 20;
+		<br>
+		<br>
+		<br>
+		<br>
+
+
+		<div id="ampel">
+			<div id="lampeRot"></div>
+			<div id="lampeGelb"></div>
+			<div id="lampeGruen"></div>
+		</div>
+		<script>
+			const radius = 20;
 let timer = null;
 
 ampel.style.backgroundColor = "darkgrey";
@@ -64,5 +77,8 @@ function ampelSchalten(){
         lampeRot.style.backgroundColor = "black";
     }
 };
+		</script>
 
-</script>
+
+	</body>
+</html>

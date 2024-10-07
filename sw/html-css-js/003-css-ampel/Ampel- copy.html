@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		<button id="ampelStart">start</button>
+		<button id="ampelStopp">stopp</button>
+		<hr>
+		<hr>
+		<hr>
+		<hr>
+		<div id="ampel">
+			<div id="lampeRot"></div>
+			<div id="lampeGelb"></div>
+			<div id="lampeGruen"></div>
+		</div>
+		<script>
+			const radius = 20;
+      let timer = null;
+      const zeitInterval=2000;
+      const multiplicator=10;
+      ampel.style.backgroundColor = "darkgrey";
+      ampel.style.width = multiplicator*radius+"px";
+      ampel.style.height = multiplicator*3*radius+"px";
+      ampel.style.borderRadius = 0.2*radius+"px";  
+      
+      macheEinenKreis(lampeRot,"red");
+      macheEinenKreis(lampeGelb,"black");
+      macheEinenKreis(lampeGruen,"black");
+
+      function macheEinenKreis(element, farbe){
+        element.style.backgroundColor = farbe;
+        element.style.width = multiplicator*radius+"px";
+        element.style.height = multiplicator*radius+"px";
+        element.style.borderRadius = "60%";
+      
+      }
+
+      ampelStart.addEventListener("click",function(){
+        clearInterval( timer );
+        timer = setInterval(ampelSchalten, zeitInterval);
+      });
+
+      ampelStopp.addEventListener("click",function(){
+        clearInterval( timer );
+      });
+      function ampelSchalten(){
+          if(lampeRot.style.backgroundColor == "red" && lampeGelb.style.backgroundColor=="black"){
+              lampeGelb.style.backgroundColor = "yellow";
+              lampeGruen.style.backgroundColor = "black";
+        }
+          else if(lampeGelb.style.backgroundColor == "yellow" && lampeRot.style.backgroundColor == "red"){
+              lampeRot.style.backgroundColor = "black";
+              lampeGruen.style.backgroundColor = "lightgreen";
+              lampeGelb.style.backgroundColor = "black";
+          }
+          else if(lampeGruen.style.backgroundColor == "lightgreen"){
+              lampeGelb.style.backgroundColor = "yellow";
+              lampeGruen.style.backgroundColor = "black";
+              lampeRot.style.backgroundColor = "black";
+          }
+          else if(lampeGelb.style.backgroundColor == "yellow"  ){
+              lampeGruen.style.backgroundColor = "black";
+              lampeGelb.style.backgroundColor = "black";
+              lampeRot.style.backgroundColor = "red";
+          }else {
+            lampeRot.style.backgroundColor = "black";
+              lampeGruen.style.backgroundColor = "lightgreen";
+              lampeGelb.style.backgroundColor = "black";
+          }
+      };
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>

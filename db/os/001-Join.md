@@ -80,7 +80,7 @@
 4. Liste alle Verlage und die Bücher, die sie veröffentlicht haben, auch wenn sie keine Bücher veröffentlicht haben.
 5. Liste alle Verlage und die Anzahl der Bücher, die sie veröffentlicht haben, auch wenn sie keine Bücher veröffentlicht haben.
 6. Liste alle Verlage und die Bücher, die sie veröffentlicht haben, auch wenn der Verlag keine Bücher veröffentlicht hat.
-   7.Liste alle Adressen und die Städte, in denen sie sich befinden, auch wenn keine Adresse in der Stadt vorhanden ist.
+7. Liste alle Adressen und die Städte, in denen sie sich befinden, auch wenn keine Adresse in der Stadt vorhanden ist.
 
 #### Abfragen Gruppe IV - GROUP BY, AVG, SUM, MAX, MIN, COUNT
 
@@ -92,4 +92,48 @@
 6. Liste Durchschnittspreis der Bücher pro Autor (Füge Vorname und Nachname zusammen, z.B. Max Mustermann in einer Spalte als 'Kunde')
 7. Liste maximale und minimale Buchpreise pro Verlag
 
-####
+#### Abfragen Gruppe V - (Left) JOIN, GROUP BY, HAVING, WILD CARDS
+
+##### Die SQL HAVING-Klausel
+
+Die `HAVING`-Klausel wurde zu SQL hinzugefügt, da das `WHERE` Schlüsselwort **nicht mit Aggregatfunktionen** verwendet werden kann.
+
+- HAVING-Syntax
+
+```sql
+SELECT spalte1, spalte2,...
+FROM tabellenname
+WHERE bedingung
+GROUP BY spalte1, spalte2,...
+HAVING bedingung
+ORDER BY spalte1, spalte2,...;
+
+```
+
+- Beispiel:
+
+- Liste die Anzahl der Kunden in jedem Stadt auf. Schließen Sie nur Städte mit mindestens 3 Kunden ein und sortiere von hoch nach niedrig.
+
+```sql
+SELECT s.stadt, COUNT(k.kundennummer)
+FROM kunde k
+INNER JOIN adresse a
+ON a.adresseid=k.adresseid
+INNER JOIN stadt_plz s
+ON s.stadtplzid=a.stadtplzid
+GROUP BY s.stadt
+HAVING
+COUNT(k.kundennummer)>2
+ORDER BY COUNT(k.kundennummer) DESC;
+
+```
+
+1. Finde die Anzahl der Bücher, die von jedem Autor geschrieben wurden, und filtere die Autoren, die mehr als 2 Bücher geschrieben haben.
+
+2. Finde die Autoren, deren durchschnittlicher Buchpreis mehr als 30 Euro beträgt.
+
+3. Finden Sie Städte, die mehr als 2 Adressen haben.
+
+4. Liste alle Kunden und die Bücher, die sie ausgeliehen haben. Zeige auch Kunden an, die keine Bücher ausgeliehen haben.
+
+5. Finde die Anzahl der Bücher, die von jedem Verlag veröffentlicht wurden, auch wenn einige Verlage keine Bücher veröffentlicht haben.
