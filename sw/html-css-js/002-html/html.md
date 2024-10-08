@@ -266,3 +266,113 @@ Verwenden Sie die `float` Eigenschaft, um das Bild rechts oder links neben einem
   Das Bild wird links neben dem Text angezeigt.
 </p>
 ```
+
+## HTML-Stile
+
+Jeder HTML-Tag enthält vordefinierte Stilfarben. Diese sind schwarz für den Text und weiß für den Hintergrund. Sie können sie mit der Eigenschaft style nach Belieben einfärben.
+
+### Ändern der Hintergrundfarbe
+
+Um die Hintergrundfarbe zu ändern, müssen Sie die Eigenschaft bgcolor verwenden. Im folgenden Beispiel sehen Sie das im Detail:
+
+```html
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body bgcolor="red">
+    <h3 align="center">TEB</h3>
+    <h3 align="center">Berufskolleg</h3>
+    <h3 align="center">Euskirchen</h3>
+  </body>
+</html>
+```
+
+### Ändern der verwendeten Textfarben
+
+Um die verwendeten Textfarben zu ändern, verwenden Sie einfach das Adjektiv `text`. Die Verwendung des Adjektivs wird im folgenden Beispiel ausführlich beschrieben:
+
+```html
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body bgcolor="red" text="blue">
+    <h3 align="center">TEB</h3>
+    <h3 align="center">Berufskolleg</h3>
+    <h3 align="center">Euskirchen</h3>
+  </body>
+</html>
+```
+
+## Tabellen
+
+Da gut definierte Tabellen viele verschiedene Tags enthalten, lernen Sie zunächst die Bedeutung der Tags kennen und sehen dann, wie Sie diese mit verschiedenen Parametern ordentlicher gestalten können.
+
+### Tabellentags
+
+- `table`-Tag: Der `<table>` -Tag definiert eine Tabelle im HTML-Code. Wenn der Parameter "border" definiert ist, zeigt der Browser die Tabelle mit Rahmen an.
+- `caption`-Tag: Der `<caption>` -Tag definiert eine Beschriftung für die Tabelle. Die Standardposition der Tabellenüberschrift ist zentriert oberhalb der Tabelle.
+- `tr`-Tag: Der `<tr>` -Tag definiert eine Tabellenzeile innerhalb der Tabelle.
+- `th`-Tag: Der `<th>`-Tag definiert eine Tabellenkopfzelle. Standardmäßig ist der Text in dieser Zelle zentriert und fett.
+- `td`-Tag: Der `<td>`-Tag definiert eine Tabellenzelle. Standardmäßig ist der Text in dieser Zelle linksbündig und vertikal zentriert.
+
+### Tabellenattribute
+
+- **Align-Attribut**: Gibt die horizontale Ausrichtung der Zelldaten an. Sie legen ihn mit den Werten „left“ (links), „right“ (rechts) oder „center“ (mittig) fest.
+- **Valign-Attribut**: Bestimmt die vertikale Ausrichtung der Zelldaten. Sie legen ihn mit den Werten „top“ (oben), „middle“ (mittig) oder „bottom“ (unten) fest.
+- **Colspan-Attribut**: Gibt die Anzahl der Spalten an, die eine Zelle überspannt. Es deckt so viele Spalten ab, wie angegeben.
+- **Rowspan-Attribut**: Gibt die Anzahl der Zeilen an, die von einer Zelle überspannt werden. Es erlaubt so viele Zeilen, wie angegeben.
+- **Nowrap-Attribut**: Hebt den automatischen Zeilenumbruch auf.
+
+### in HTML5
+
+Während die grundlegende Struktur des `<table>`-Tags in HTML5 gleich geblieben ist, gibt es einige Neuerungen und Verbesserungen:
+
+**Semantik**: HTML5 legt einen stärkeren Fokus auf Semantik. Durch die Verwendung von `<thead>`, `<tbody>` und `<tfoot>` wird die Bedeutung der einzelnen Teile einer Tabelle klarer.
+
+![alt text](img/thead-tbody.png)  
+(Quelle: https://www.blog.duomly.com/how-to-build-an-html-table-tutorial/ 07.10.2024)
+
+**Zugänglichkeit**: Screenreader können Tabelleninhalte besser interpretieren, wenn sie semantisch korrekt strukturiert sind.
+**CSS-Styling**: Mit CSS können Tabellen jetzt noch flexibler und ansprechender gestaltet werden.
+**Responsives Design**: Tabellen können mithilfe von CSS so angepasst werden, dass sie auf verschiedenen Bildschirmgrößen gut aussehen.
+z.B. https://www.arbeitsagentur.de/
+
+`<thead>`: Enthält die Tabellenkopfzeile mit den Spaltenüberschriften.
+`<tbody>`: Enthält den eigentlichen Tabellenkörper mit den Datenzeilen.
+`<tfoot>`: Enthält die Tabellenfußzeile, z.B. mit Summen oder Durchschnitten.
+
+### Überspannende Spalten oder Zeilen
+
+Tabellenzellen können sich mithilfe der Attribute und über mehrere Spalten oder Zeilen erstrecken `colspan`. Diese Attribute können auf Elemente und `rowspan` angewendet werden .
+
+```html
+<table>
+  <tr>
+    <td>row 1 col 1</td>
+    <td>row 1 col 2</td>
+    <td>row 1 col 3</td>
+  </tr>
+  <tr>
+    <td colspan="3">This second row spans all three columns</td>
+  </tr>
+  <tr>
+    <td rowspan="2">This cell spans two rows</td>
+    <td>row 3 col 2</td>
+    <td>row 3 col 3</td>
+  </tr>
+  <tr>
+    <td>row 4 col 2</td>
+    <td>row 4 col 3</td>
+  </tr>
+</table>
+```
+
+Beachten Sie, dass Sie keine Tabelle entwerfen sollten, bei der sich Zeilen und Spalten überlappen, da dies ungültiges HTML ist und das Ergebnis von verschiedenen Webbrowsern unterschiedlich verarbeitet wird.
+
+**rowspan**= Eine nicht negative Ganzzahl, die die Anzahl der Zeilen angibt, die eine Zelle umfasst. Der Standardwert dieses Attributs ist eins ( 1). Ein Wert von null ( 0) bedeutet, dass sich die Zelle von der aktuellen Zeile bis zur letzten Zeile der Tabelle erstreckt (` <thead>`, `<tbody>`, oder `<tfoot>`).
+
+**colspan**= Eine nicht negative Ganzzahl, die die Anzahl der Spalten angibt, die von der aktuellen Zelle überspannt werden. Der Standardwert dieses Attributs ist eins ( 1). Ein Wert von null ( 0) bedeutet, dass sich die Zelle von der aktuellen bis zur letzten Spalte der Spaltengruppe erstreckt, `<colgroup>` in der die Zelle definiert ist.
+
+(Quelle: https://www.programming-books.io/essential/html/spanning-columns-or-rows-016524a36e964856b54960193fd52b86 07.10.2024)

@@ -137,3 +137,5 @@ ORDER BY COUNT(k.kundennummer) DESC;
 4. Liste alle Kunden und die Bücher, die sie ausgeliehen haben. Zeige auch Kunden an, die keine Bücher ausgeliehen haben.
 
 5. Finde die Anzahl der Bücher, die von jedem Verlag veröffentlicht wurden, auch wenn einige Verlage keine Bücher veröffentlicht haben.
+
+
