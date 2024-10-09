@@ -59,10 +59,10 @@ where anschaffungsdatum>"2023-01-01";
 
 | Smbol   | Anlam                                                  |
 | ------- | ------------------------------------------------------ |
-| $$=$$      | Gleich                                                 |
-|  $$>$$      | Größer als                                             |
-| $$<$$       | Kleiner als                                            |
-| $$>=$$      | Größer als oder gleich                                 |
+| $$=$$   | Gleich                                                 |
+| $$>$$   | Größer als                                             |
+| $$<$$   | Kleiner als                                            |
+| $$>=$$  | Größer als oder gleich                                 |
 | $$<=$$  | Kleiner als oder gleich                                |
 | $$<>$$  | Nicht gleich                                           |
 | $$!=$$  | Nicht gleich                                           |
@@ -162,7 +162,7 @@ ORDER BY kundennachname DESC, kundenvorname ASC;
 
 26. Welche Bücher wurden nach dem 1. Januar 2023 angeschafft und wie lauten diese aufsteigend nach dem Anschaffungsdatum geordnet?
 
-27. Welche Adressen haben die Stadt-PLZ-ID 1?
+-- 27. Welche Adressen haben die Stadt-PLZ-ID 1?
 
 28. Welche Kunden haben den Vornamen 'Jane' und wie lauten diese aufsteigend nach dem Nachnamen geordnet?
 
