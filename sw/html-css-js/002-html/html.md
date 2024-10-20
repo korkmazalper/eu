@@ -193,7 +193,7 @@ Es gibt zwei Möglichkeiten, die URL im Attribut anzugeben `src` :
 />
 ```
 
-2. Relative URL – Links zu einem Bild, das auf der Website gehostet wird. Hier enthält die URL nicht den Domänennamen. Wenn die URL ohne Schrägstrich beginnt, ist sie relativ zur aktuellen Seite.
+2. **Relative URL** – Links zu einem Bild, das auf der Website gehostet wird. Hier enthält die URL nicht den Domänennamen. Wenn die URL ohne Schrägstrich beginnt, ist sie relativ zur aktuellen Seite.
 
 ```html
 <img src="./img/bird.jpg" />

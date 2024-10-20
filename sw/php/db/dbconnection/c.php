@@ -1,6 +1,6 @@
 <?php
 $host="localhost";
-$dbname="kunde_buch";
+$dbname="kunde_buch_v4";
 $user="root";
 $password="";
 try{
