@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
 
-<body>
-    <p>
-        OOP
-    </p>
 
-    
-    <script>
-        class Car {
+
+	</head>
+
+
+
+
+
+
+	<body>
+		<p>OOP</p>
+
+
+
+
+		<p></p>
+
+
+
+		<script>
+			class Car {
       constructor(make, model) {
         this.make = make;
         this.model = model;
@@ -32,6 +45,17 @@
     const car2 = new Car("Mazda", "3i");
     car1.shift('D');
     car2.shift('R');
-    </script>
-</body>
+
+    const carInfoDiv = document.createElement('div');
+    carInfoDiv.innerHTML = `
+      <p>Car 1: Make: ${car1.make}, Model: ${car1.model}, Gear: ${car1.userGear}</p>
+      <p>Car 2: Make: ${car2.make}, Model: ${car2.model}, Gear: ${car2.userGear}</p>
+    `;
+    document.body.appendChild(carInfoDiv);
+		</script>
+
+
+
+
+	</body>
 </html>
