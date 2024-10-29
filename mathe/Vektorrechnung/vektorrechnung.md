@@ -1,0 +1,6 @@
+# Vektoren
+
+In der Ebene lassen sich Punkte und Figuren eindeutig beschreiben, indem sie in einem Koordinatensystem mit zwei zueinander senkrechten Achsen dargestellt werden. Es ist üblich die Achsen mit und x2 zu bezeichnen. Punkte werden durch die Koordinaten $p_1$, ($x_1$-Wert) und $p_2$ ($x_2$-Wert) dargestellt: $P (p_1 | p_2)$. Die Eckpunkte des dargestellten Recht-ecks sind $A (0|0), B (2|0), C (2|1)$ und $D(0|1)$. Es kommt auf die Reihenfolge der Koordinaten an: So darf $R (3|1)$ nicht mit $S(1|3)$ verwechselt werden.
+Um Punkte im Raum darzustellen, verwendet man drei Achsen, die paarweise aufeinander senkrecht stehen und die sich alle in einem Punkt (dem Ursprung $0$) schneiden. Ein solches Koordinatensystem nennt man auch **kartesisches Koordinatensystem**.
+Da man drei zueinander senkrechte Achsen in der Ebene nicht zeichnen kann, wird die $x_1$-Achse „nach vorn", die $x_2$-Achse „nach rechts" und die $x_3$-Achse „nach oben" gezeichnet. Um einen räumlichen Eindruck zu erreichen, wird die $x_1$-Achse in einem 135°-Winkel zur $x_2$
+-Achse gezeichnet Die Einheiten auf der $x_1$-Achse werden verkürzt gezeichnet. Verkürzungsfaktor ist etwa 0,7. Das bedeutet bei zwei Kästchen auf der $x_2$-Achse und $x_3$-Achse als Einheit dass auf der x-Achse eine Kästchendiagonale die Längeneinheit 1 darstellt.
