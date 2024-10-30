@@ -1,3 +1,13 @@
+/**
+ * 
+ * In JavaScript ermöglicht diese Struktur 
+ * die Erzeugung und Rückgabe von Funktionen basierend auf einer 
+ * bestimmten Bedingung. 
+ * Solche Funktionen, die andere Funktionen zurückgeben, 
+ * werden als höhere Ordnungsfunktionen (Higher-Order Functions) bezeichnet.
+ */
+
+
 function greeting(language) {
     if (language.toLowerCase() == "english") {
         return function (name) {
