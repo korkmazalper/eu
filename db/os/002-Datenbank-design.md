@@ -7,6 +7,7 @@
     verhalts. Dazu gibt es mehrere Möglichkeiten. Der bekannteste Ansatz ist das ER-Modell.
 
 ![alt text](konzeptionalle-phase.png)
+Quelle: IT-Berufe, Westermann
 
 3. **Logische Phase (Erstellung eines logischen Datenmodells)**
 
@@ -14,6 +15,7 @@ In dieser Phase wird das konzeptionelle Modell in ein relationales Datenmodell �
 Dabei werden zwei Schritte durchlaufen. Im ersten Schritt wird das ER-Modell in ein relationales Datenmodell überführt. Im zweiten Schritt erfolgt eine Optimierung des relationalen Datenmodells durch Normalisierung.
 
 ![alt text](logische-phase.png)
+Quelle: IT-Berufe, Westermann
 
 4.  **Implementationsphase (Erstellung der physischen Datenbank)**
     Am Ende dieser Phase sollte eine leere funktionstüchtige Datenbank existieren. Dazu wird das logische Modell mithilfe von SQL in ein konkretes Datenbankschema übersetzt. Im Zuge dessen müssen Datentypen, Wertebereiche, Relationen usw. festgelegt werden.
@@ -32,6 +34,7 @@ Es soll eine Datenbank für Astronauten, Missionen und Raumfahrzeuge modelliert 
 
 Astronauten, Missionen und Raumfahrzeuge werden in einer Datenbank gespeichert. Die folgenden Informationen über Astronauten sollten in die Datenbank aufgenommen werden.
 **Astronaut**
+
 - Vorname: Vorname des Astronauten.
 - Nachname: Nachname des Astronauten.
 - Geburtsdatum: Das Geburtsdatum des Astronauten.
@@ -41,13 +44,14 @@ Astronauten, Missionen und Raumfahrzeuge werden in einer Datenbank gespeichert. 
 - Einsätze: Eine Liste der Missionen, an denen der Astronaut teilgenommen hat.
 
 **Mission:**
+
 - Name: Name des Missions.
 - Start_Date: Startdatum des Einsatzes.
 - End_Date: Enddatum des Einsatzes.
 - Ziel: Der Himmelskörper oder die Region, auf die die Mission abzielt.
 - Weltraum_Fahrzeug: ID (Fremdschlüssel) des für die Mission verwendeten Raumfahrzeugs.
 - Crew: Eine Liste (mehrwertig) der IDs der an der Mission beteiligten Astronauten.
-**Raumschiff_Fahrzeug:**
+  **Raumschiff_Fahrzeug:**
 - Name: Name des Raumfahrzeugs.
 - Typ: Typ des Raumfahrzeugs (Shuttle, Station, Sonde, usw.).
 - Hersteller: Hersteller des Raumfahrzeugs.
