@@ -7,6 +7,7 @@
     verhalts. Dazu gibt es mehrere Möglichkeiten. Der bekannteste Ansatz ist das ER-Modell.
 
 ![alt text](konzeptionalle-phase.png)
+
 Quelle: IT-Berufe, Westermann
 
 3. **Logische Phase (Erstellung eines logischen Datenmodells)**
@@ -15,6 +16,7 @@ In dieser Phase wird das konzeptionelle Modell in ein relationales Datenmodell �
 Dabei werden zwei Schritte durchlaufen. Im ersten Schritt wird das ER-Modell in ein relationales Datenmodell überführt. Im zweiten Schritt erfolgt eine Optimierung des relationalen Datenmodells durch Normalisierung.
 
 ![alt text](logische-phase.png)
+
 Quelle: IT-Berufe, Westermann
 
 4.  **Implementationsphase (Erstellung der physischen Datenbank)**
