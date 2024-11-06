@@ -17,7 +17,7 @@ Mit dieser Warnung im Hinterkopf wollen wir nun die Hauptmethoden betrachten, um
 
 #### for...in
 
-Die traditionelle Methode, die Eigenschaften eines Objekts zu enumerieren, ist for...in. Betrachten wir ein Objekt, das einige String-Eigenschaften und eine einzelne Symbol-Eigenschaft hat:
+Die traditionelle Methode, die Eigenschaften eines Objekts zu enumerieren, ist `for...in`. Betrachten wir ein Objekt, das einige String-Eigenschaften und eine einzelne Symbol-Eigenschaft hat:
 
 ```js
 const obj = {
@@ -34,10 +34,10 @@ for (let prop in obj) {
 }
 ```
 
-Das scheint ziemlich einfach... außer dass du dich wahrscheinlich fragst, was `hasOwnProperty` macht. Dies adressiert eine Gefahr der for...in-Schleife. In diesem Beispiel könnte man es weglassen, und es würde keinen Unterschied machen. Wenn du jedoch die Eigenschaften anderer Objekttypen – insbesondere Objekte, die von woanders her stammen – enumerierst, könntest du Eigenschaften finden, die du nicht erwartet hast. Ich empfehle dir, dir anzugewöhnen, `hasOwnProperty` zu verwenden. Wir werden bald lernen, warum es wichtig ist, und du wirst das Wissen haben, um zu entscheiden, wann es sicher (oder wünschenswert) ist, es wegzulassen.
+Das scheint ziemlich einfach... außer dass du dich wahrscheinlich fragst, was `hasOwnProperty` macht. Dies adressiert eine Gefahr der `for...in`-Schleife. In diesem Beispiel könnte man es weglassen, und es würde keinen Unterschied machen. Wenn du jedoch die Eigenschaften anderer Objekttypen – insbesondere Objekte, die von woanders her stammen – enumerierst, könntest du Eigenschaften finden, die du nicht erwartet hast. Ich empfehle dir, dir anzugewöhnen, `hasOwnProperty` zu verwenden. Wir werden bald lernen, warum es wichtig ist, und du wirst das Wissen haben, um zu entscheiden, wann es sicher (oder wünschenswert) ist, es wegzulassen.
 
 - Objekte bestehen aus Schlüssel-Wert-Paaren.
-- Werte können Literale, Objekte, null oder Funktionen sein.
+- Werte können Literale, Objekte, `null` oder Funktionen sein.
 - Objekte können ineinander verschachtelt (nested) werden.
 - In der einschlägigen Literatur werden häufig folgende Bezeichnungen verwendet:
   - **Attribut**, **Feld** oder Eigenschaft
@@ -59,7 +59,7 @@ delete obst1.grosse
 console.log(obst1)
 ```
 
-### Verschhtelte Objekte
+### Verschatelte Objekte
 
 ```js
 const { exec } = require('child_process')
@@ -149,11 +149,14 @@ Object.keys(o)
 
 Objektorientierte Programmierung (OOP) ist ein altes Paradigma in der Informatik. Einige der Konzepte, die wir heute als OOP kennen, tauchten erstmals in den 1950er Jahren auf, aber es dauerte bis zur Einführung von Simula 67 und dann Smalltalk, bis eine erkennbare Form der OOP entstand.
 
-Die Grundidee ist einfach und intuitiv: Ein Objekt ist eine logisch zusammenhängende Sammlung von Daten und Funktionen. Es ist so konzipiert, dass es unserer natürlichen Auffassung der Welt entspricht. Ein Auto ist ein Objekt, das Daten hat (Marke, Modell, Anzahl der Türen, VIN usw.) und Funktionalitäten (beschleunigen, schalten, Türen öffnen, Scheinwerfer einschalten usw.). Außerdem ermöglicht OOP, Dinge abstrakt (ein Auto) und konkret (ein bestimmtes Auto) zu betrachten.
+Die Grundidee ist einfach und intuitiv: **Ein Objekt ist eine logisch zusammenhängende Sammlung von Daten (Zustände) und Funktionen(Verhalten)**. Es ist so konzipiert, dass es unserer natürlichen Auffassung der Welt entspricht. **Ein Auto ist ein Objekt, das Daten hat (Marke, Modell, Anzahl der Türen, VIN usw.) und Funktionalitäten (beschleunigen, schalten, Türen öffnen, Scheinwerfer einschalten usw.)**. Außerdem ermöglicht OOP, **Dinge abstrakt (ein Auto)** und **konkret (ein bestimmtes Auto)** zu betrachten.
 
-Bevor wir tiefer einsteigen, lassen Sie uns die grundlegende Terminologie von OOP klären. Eine Klasse bezieht sich auf eine generische Sache (ein Auto). Eine Instanz (oder Objektinstanz) bezieht sich auf eine spezifische Sache (ein bestimmtes Auto, wie „Mein Auto“). Eine Funktionalität (beschleunigen) wird als Methode bezeichnet. Eine Funktionalität, die sich auf die Klasse bezieht, aber nicht auf eine bestimmte Instanz, wird als Klassenmethode bezeichnet (zum Beispiel könnte „neue VIN erstellen“ eine Klassenmethode sein: Es bezieht sich noch nicht auf ein bestimmtes neues Auto, und sicherlich erwarten wir nicht, dass ein bestimmtes Auto in der Lage ist, eine neue, gültige VIN zu erstellen). Wenn eine Instanz erstmals erstellt wird, wird ihr Konstruktor ausgeführt. Der Konstruktor initialisiert die Objektinstanz.
+- **Eine Klasse bezieht sich auf eine generische Sache (ein Auto)**.
+- **Eine Instanz (oder Objektinstanz) bezieht sich auf eine spezifische Sache (ein bestimmtes Auto, wie „Mein Auto“)**.
+- Eine **Funktionalität** (beschleunigen) wird als **Methode** bezeichnet. Eine **Funktionalität**, **die sich auf die Klasse bezieht, aber nicht auf eine bestimmte Instanz**, wird als **Klassenmethode** bezeichnet (zum Beispiel könnte „neue VIN erstellen“ eine Klassenmethode sein: Es bezieht sich noch nicht auf ein bestimmtes neues Auto, und sicherlich erwarten wir nicht, dass ein bestimmtes Auto in der Lage ist, eine neue, gültige VIN zu erstellen).
+- Wenn eine Instanz erstmals erstellt wird, wird ihr **Konstruktor** ausgeführt. Der Konstruktor initialisiert die Objektinstanz.
 
-OOP gibt uns auch einen Rahmen zur hierarchischen Kategorisierung von Klassen. Zum Beispiel könnte es eine allgemeinere Klasse „Fahrzeug“ geben. Ein Fahrzeug hat möglicherweise eine Reichweite (die Distanz, die es ohne Auftanken oder Aufladen zurücklegen kann), aber im Gegensatz zu einem Auto hat es möglicherweise keine Räder (ein Boot ist ein Beispiel für ein Fahrzeug, das wahrscheinlich keine Räder hat). Wir sagen, dass „Fahrzeug“ eine Oberklasse von „Auto“ ist und „Auto“ eine Unterklasse von „Fahrzeug“. Die Fahrzeugklasse kann mehrere Unterklassen haben: Autos, Boote, Flugzeuge, Motorräder, Fahrräder usw. Und Unterklassen können wiederum weitere Unterklassen haben. Zum Beispiel kann die Unterklasse „Boot“ weitere Unterklassen wie Segelboot, Ruderboot, Kanu, Schlepper, Motorboot usw. haben.
+OOP gibt uns auch einen Rahmen zur **hierarchischen Kategorisierung von Klassen**. Zum Beispiel könnte es eine allgemeinere Klasse „Fahrzeug“ geben. Ein Fahrzeug hat möglicherweise eine Reichweite (die Distanz, die es ohne Auftanken oder Aufladen zurücklegen kann), aber im Gegensatz zu einem Auto hat es möglicherweise keine Räder (ein Boot ist ein Beispiel für ein Fahrzeug, das wahrscheinlich keine Räder hat). Wir sagen, dass „Fahrzeug“ eine Oberklasse von „Auto“ ist und „Auto“ eine Unterklasse von „Fahrzeug“. Die Fahrzeugklasse kann mehrere Unterklassen haben: Autos, Boote, Flugzeuge, Motorräder, Fahrräder usw. Und Unterklassen können wiederum weitere Unterklassen haben. Zum Beispiel kann die Unterklasse „Boot“ weitere Unterklassen wie Segelboot, Ruderboot, Kanu, Schlepper, Motorboot usw. haben.
 
 Wir werden das Beispiel eines Autos in diesem Kapitel verwenden, da es sich um ein reales Objekt handelt, mit dem wir uns wahrscheinlich alle identifizieren können (auch wenn wir nicht Teil der Autokultur sind).
 
@@ -203,7 +206,10 @@ class Car {
 }
 ```
 
-Hier wird das Schlüsselwort `this` für seinen vorgesehenen Zweck verwendet: um auf die Instanz zu verweisen, auf die die Methode aufgerufen wurde. Du kannst dir `this` als Platzhalter vorstellen: Wenn du deine Klasse schreibst – die abstrakt ist – dient `this` als Platzhalter für eine spezifische Instanz, die bekannt sein wird, wenn die Methode aufgerufen wird. Dieser Konstruktor ermöglicht es uns, die Marke und das Modell des Autos beim Erstellen zu spezifizieren. Außerdem legt er einige Standardwerte fest: die gültigen Gänge (`userGears`) und den aktuellen Gang (`gear`), den wir auf den ersten gültigen Gang setzen. (Ich habe diese User-Gears(Benutzer-Gänge) genannt, weil, wenn dieses Auto ein Automatikgetriebe hat, es im Fahrmodus einen mechanischen Gang gibt, der möglicherweise anders ist.)
+- Hier wird das Schlüsselwort `this` für seinen vorgesehenen Zweck verwendet: **um auf die Instanz zu verweisen, auf die die Methode aufgerufen wurde**.
+- Du kannst dir `this` als **Platzhalter** vorstellen: Wenn du deine Klasse schreibst – die abstrakt ist – dient `this` als **Platzhalter** für eine spezifische Instanz, die bekannt sein wird, wenn die Methode aufgerufen wird.
+- Dieser Konstruktor ermöglicht es uns, die Marke und das Modell des Autos beim Erstellen zu spezifizieren.
+- Außerdem legt er einige Standardwerte fest: die gültigen Gänge (`userGears`) und den aktuellen Gang (`gear`), den wir auf den ersten gültigen Gang setzen. (Ich habe diese User-Gears(Benutzer-Gänge) genannt, weil, wenn dieses Auto ein Automatikgetriebe hat, es im Fahrmodus einen mechanischen Gang gibt, der möglicherweise anders ist.)
 
 Zusätzlich zum Konstruktor – der implizit aufgerufen wird, wenn wir ein neues Objekt erstellen – haben wir auch eine Methode `shift` erstellt, die es uns ermöglicht, auf einen gültigen Gear(Gang) zu wechseln. Schauen wir uns das in Aktion an:
 

@@ -21,6 +21,20 @@ const person1 = {
 
 };
 
+/*
+Schreiben Sie eine Funktion, die die Eigenschaften eines Objekts ausgibt. 
+Die Funktion sollte in der Lage sein, verschachtelte Objekte zu behandeln, 
+und dabei für jedes weitere Verschachtelungsniveau eine zusätzliche 
+Einrückung (Indentierung) verwenden.
+
+Erstellen Sie eine Funktion, die jede Eigenschaft eines Objekts rekursiv durchläuft.
+Wenn der Wert einer Eigenschaft ein weiteres Objekt ist, 
+soll die Funktion dieses Objekt ebenfalls durchlaufen und 
+die Eigenschaften mit zusätzlicher Einrückung anzeigen.
+Andernfalls sollte die Funktion die Eigenschaft und 
+ihren Wert auf der aktuellen Einrückungsstufe anzeigen.
+*/
+
 function printObject(obj, einrueckung = "") {
   for (let prop in obj) {
     if (obj.hasOwnProperty(prop)) {
