@@ -53,18 +53,20 @@ class Car {
     this.userGears = ['P', 'N', 'R', 'D']
     this.userGear = this.userGears[0]
     }
-    constructor(make){
-        this.make = make
-        this.model = "X"
-        this.userGears = ['P', 'N', 'R', 'D']
-        this.userGear = this.userGears[0]
-    }
+   
   shift(gear) {
     if (this.userGears.indexOf(gear) < 0) {
       throw new Error(`Ungültiger Gang: ${gear}`)
     }
     this.userGear = gear
-  }
+    }
+    toJSON() {
+        return {
+            make: this.make,
+            model: this.model,
+            
+        };
+    }
 }
 
 var car1 = new Car();
@@ -83,6 +85,6 @@ var car3 = new Car("Ford", "Mustang");
 var car4 = new Car("Toyota");
 
 
-
+console.log(JSON.stringify(car3));
 
 

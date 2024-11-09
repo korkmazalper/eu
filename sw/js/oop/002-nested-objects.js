@@ -52,4 +52,4 @@ console.log(`${"=".repeat(15)}`);
 console.log(`Meine name ist ${person1.personal.vorname + " " + person1.personal.nachname}. 
 Ich bin aus ${person1.ort.land}.`);
 console.log(`${"=".repeat(15)}`);
-person1.show()
+person1.show();
