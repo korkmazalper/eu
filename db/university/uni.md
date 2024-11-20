@@ -1,12 +1,16 @@
+# Universitätmodell
+
 Überführen Sie das folgende ER-Modell in ein relationales Modell. Es muss noch nicht normalisiert werden.
 
-Analyse
+### Analyse
+
 Es wurde eine Datenbank für Studierende, Kurse, Dozenten, Fakultäten, Bibliotheken, Projekte und Adressen basierend auf einer Reihe von Gesprächen mit einem Universitätsvertreter und Dozenten entwickelt. Während der Interviews wurden die folgenden Anforderungen und Schlüsselaspekte definiert:
 
 - Studierende können sich für mehrere Kurse einschreiben, und ein Kurs kann mehrere eingeschriebene Studierende haben.
 - Ein Kurs kann von mehreren Dozenten unterrichtet werden, und ein Dozent kann mehrere Kurse lehren. Diese Beziehung sollte in der Datenbank abgebildet werden.
 - Studierende gehören zu einer bestimmten Fakultät, die für ihren Studiengang zuständig ist.
 - Projekte werden von Dozenten betreut und von Studierenden durchgeführt.
+- Jede Person hat eine Adresse. Eine Adresse gehört nur einer Person. Die Fakültät hat auch eine Addresse.
 
 Die folgenden Entitäten und Attribute wurden auf Grundlage dieser Gespräche definiert:
 
@@ -70,59 +74,56 @@ Land: Land, in dem sich die Adresse befindet.
 Bezirk: Der Bezirk oder das Stadtviertel.
 Hinweis: Adressen werden Studierenden, Dozenten und Bibliotheken zugeordnet.
 
-Konzeptionalle Phase
+### Konzeptionalle Phase
+
 Basierend auf den Anforderungen und Gesprächen mit dem Kunden sollte das ER-Modell erstellt werden, um die Beziehungen zwischen den Entitäten zu verdeutlichen. Überlegen Sie sich, wie die viele-zu-viele-Beziehung zwischen Dozenten und Kursen sowie zwischen Studierenden und Kursen modelliert werden kann.
 
-Logische Phase
-Überführen Sie das ER-Modell in ein relationales Modell und erstellen Sie die Tabellenstrukturen mit der Identifikation von Primär- und Fremdschlüsseln, die aus den im Text gegebenen Hinweisen abgeleitet werden können.
+### Logische Phase
 
+Überführen Sie das ER-Modell in ein relationales Modell und erstellen Sie die Tabellenstrukturen mit der Identifikation von Primär- und Fremdschlüsseln, die aus den im Text gegebenen Hinweisen abgeleitet werden können.
 
 ```mermaid
 
 erDiagram
-STUDIERENDE {
-string Matrikelnummer PK
+STUDENT {
+int Matrikelnummer PK
 string Vorname
 string Nachname
 string Studiengang
 string Email
-int Fakultaet_ID FK
 }
-KURS {
-string Kurs_ID PK
+COURSE {
+int Kurs_ID PK
 string Kursname
 string Semester
 int Leistungspunkte
 }
-DOZENT {
-string Dozent_ID PK
+PROFESSOR {
+int Dozent_ID PK
 string Vorname
 string Nachname
 string Fachgebiet
-int Fakultaet_ID FK
 }
-FAKULTAET {
+FACULTY {
 int Fakultaet_ID PK
 string Name
 string Dekan
 string Telefonnummer
 }
-BIBLIOTHEK {
-string Bibliothek_ID PK
+LIBRARY {
+int Bibliothek_ID PK
 string Name
 int Buecherbestand
 string Oeffnungszeiten
-int Adress_ID FK
 }
-PROJEKT {
-string Projekt_ID PK
+PROJECT {
+int Projekt_ID PK
 string Titel
 string Beschreibung
 date Startdatum
 date Enddatum
-string Dozent_ID FK
 }
-ADRESSE {
+ADDRESS {
 int Adress_ID PK
 string Strasse
 string Stadt
@@ -130,16 +131,16 @@ string Postleitzahl
 string Land
 string Bezirk
 }
-STUDIERENDE ||--|{ KURS : "nimmt teil"
-DOZENT ||--|{ KURS : "unterrichtet"
-STUDIERENDE }|--|| FAKULTAET : "gehoert zu"
-DOZENT }|--|| FAKULTAET : "arbeitet in"
-STUDIERENDE ||--o{ PROJEKT : "führt durch"
-DOZENT ||--o{ PROJEKT : "betreut"
-STUDIERENDE }|..o{ ADRESSE : "wohnt an"
-DOZENT }|..o{ ADRESSE : "lebt an"
-BIBLIOTHEK }|--|| ADRESSE : "befindet sich an"
+
+    STUDENT }o--o{ COURSE : "enrolls in"
+    PROFESSOR }o--o{ COURSE : "teaches"
+    STUDENT }o--o{ PROJECT : "participates in"
+    PROFESSOR }o--o{ PROJECT : "supervises"
+    STUDENT }|--|| FACULTY : "belongs to"
+    STUDENT ||--|| ADDRESS : "has"
+    PROFESSOR ||--|| ADDRESS : "has"
+    FACULTY ||--|| ADDRESS : "has"
+    LIBRARY ||--|| ADDRESS : "has"
 
 ```
 
-![alt text](image.png)
