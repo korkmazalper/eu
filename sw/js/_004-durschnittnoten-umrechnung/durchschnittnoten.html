@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0">
+		<title>Notenrechner</title>
+	</head>
+	<body>
+		<h2>Notenrechner</h2>
+		<label for="note1">Klassenarbeit 1:</label>
+		<input type="text"
+			id="note1"
+			placeholder="Note 1">
+		<br>
+		<br>
+
+
+
+		<label for="note2">Klassenarbeit 2:</label>
+		<input type="text"
+			id="note2"
+			placeholder="Note 2">
+		<br>
+		<br>
+
+
+
+		<label for="projekt">Projekt:</label>
+		<input type="text"
+			id="projekt"
+			placeholder="Projekt Note">
+		<br>
+		<br>
+
+
+
+		<label for="sonstiges">Sonstiges:</label>
+		<input type="text"
+			id="sonstiges"
+			placeholder="Sonstige Note">
+		<br>
+		<br>
+
+
+
+		<button onclick="berechneDurchschnitt()">
+			Berechne Durchschnitt
+		</button>
+		<br>
+		<br>
+
+
+
+		<label for="average">Durchschnitt:</label>
+		<input type="text"
+			id="average"
+			readonly>
+		<br>
+		<br>
+
+
+
+		<label for="grade">
+			Buchstabenbewertung:
+		</label>
+		<input type="text"
+			id="grade"
+			readonly>
+		<br>
+		<br>
+
+
+
+		<script src="./durchschnitt.js"></script>
+	</body>
+</html>

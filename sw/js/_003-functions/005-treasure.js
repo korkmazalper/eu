@@ -26,6 +26,35 @@
  * play with calculatetotal in the console and find the best combination of boxes to take home.
  */
 
+/** Aufgabe 1
+ * Erstelle 5 Objekte box1,...box5, die den Inhalt in kg für jede Box in Silber, Gold und Platin speichern.
+ * Erstelle ein Objekt priceKg, das die Preise pro kg für jede Substanz speichert: Silber, Gold und Platin.
+ * box1: 10 kg Silber, 5 kg Gold, 5 kg Platin
+ * box2: 5 kg Silber, 7 kg Gold, 0 kg Platin
+ * box3: 7 kg Silber, 3 kg Gold, 10 kg Platin
+ * box4: 6 kg Silber, 6 kg Gold, 12 kg Platin
+ * box5: 3 kg Silber, 12 kg Gold, 6 kg Platin
+ * Die Preise pro kg jeder Substanz sind: Silber 400 EUR, Gold 40.000 EUR, Platin 25.000 EUR
+ *
+ */
+/** Aufgabe 2
+ * Schreibe eine Funktion, die als Funktionsausdruck definiert ist und eine Box als Parameter nimmt, um deren Wert in EUR zu berechnen.
+ * Speichere die Funktion in einer Variablen calculateBoxValue.
+ * 
+ */
+/** Aufgabe 3
+ * Erstelle eine neue Funktion calculateTotal, die
+ * zwei Parameter nimmt: eine Funktion und ein Array,
+ * und den Gesamtwert berechnet, den man mitnehmen würde, wenn man mit 3 Boxen seiner Wahl nach Hause geht.
+ * Verwende wieder einen Funktionsausdruck anstelle einer Funktionsdeklaration.
+ */
+
+/** Aufgabe 4
+ * Aus einem mysteriösen Grund darfst du box4 und box5 nicht zusammen oder box2 und box3 nicht zusammen mitnehmen.
+ * Spiele in der Konsole mit calculateTotal und finde die beste Kombination der Boxen, die du mit nach Hause nehmen kannst.
+ */
+
+
 var box1 = {
     silver: 10,
     gold: 5,
