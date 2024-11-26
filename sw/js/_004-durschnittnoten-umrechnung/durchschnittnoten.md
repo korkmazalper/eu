@@ -17,8 +17,7 @@ F (Ungenügend): Unter 60 Punkte
 Eine unzureichende Leistung, die die Anforderungen nicht erfüllt. Der Schüler hat erhebliche Schwierigkeiten oder große Wissenslücken.
 
 ```js
-function berechneDurchschnitt() {
-  // Noten von den Eingabefeldern abrufen
+function berechneDurchschnittsnoteUndBuschstabennote() {
   let note1 = parseFloat(document.getElementById('note1').value)
   let note2 = parseFloat(document.getElementById('note2').value)
   let projekt = parseFloat(document.getElementById('projekt').value)
@@ -27,17 +26,17 @@ function berechneDurchschnitt() {
   if (isNaN(note1) || isNaN(note2) || isNaN(projekt) || isNaN(sonstiges)) {
     console.log('Ungültige Eingabe.')
   } else {
-    var durchschnittnote = (note1 + note2 + projekt + sonstiges) / 4
-    document.getElementById('average').value = durchschnittnote
+    var durchschnittsnote = (note1 + note2 + projekt + sonstiges) / 4
+    document.getElementById('average').value = durchschnittsnote
 
-    var buchstabeNote
-    if (durchschnittnote > 90) {
+    var buchstabenNote
+    if (durchschnittsnote > 90) {
       buchstabeNote = 'A'
-    } else if (durchschnittnote > 80) {
+    } else if (durchschnittsnote > 80) {
       buchstabeNote = 'B'
-    } else if (durchschnittnote > 70) {
+    } else if (durchschnittsnote > 70) {
       buchstabeNote = 'C'
-    } else if (durchschnittnote > 60) {
+    } else if (durchschnittsnote > 60) {
       buchstabeNote = 'D'
     } else {
       buchstabeNote = 'F'
@@ -46,35 +45,16 @@ function berechneDurchschnitt() {
   }
 }
 
-/** 
-  if (isNaN(note1) || isNaN(note2) || isNaN(projekt) || isNaN(sonstiges)
-  || note1<0 || note1>100 || note2<0 || note2>100) {
-  alert("Bitte gültige Noten eingeben.");
-  return;
-  }
-
-             // Durchschnitt berechnen
-             let durchschnitt = (note1 + note2 + projekt + sonstiges) / 4;
-             document.getElementById("average").value = durchschnitt.toFixed(2);
-
-             // Durchschnitt in Buchstabenbewertung umwandeln
-             let buchstabenbewertung;
-             if (durchschnitt >= 90) {
-                 buchstabenbewertung = "A";
-             } else if (durchschnitt >= 80) {
-                 buchstabenbewertung = "B";
-             } else if (durchschnitt >= 70) {
-                 buchstabenbewertung = "C";
-             } else if (durchschnitt >= 60) {
-                 buchstabenbewertung = "D";
-             } else {
-                 buchstabenbewertung = "F";
-             }
-
-             // Buchstabenbewertung ausgeben
-             document.getElementById("grade").value = buchstabenbewertung;
-
-  \*/
 ```
+In diesem Beispiel übernimmt die Funktion ``berechneDurchschnittnoteUndBuschtabenNote()`` mehrere Aufgaben:
+
+Sie validiert die Noteneingaben.
+Sie berechnet die Durchschnittsnote.
+Sie wandelt die Durchschnittsnote in eine Buchstabennote um.
+Gemäß den Prinzipien der Programmierung sollte jede Einheit – sei es eine Funktion, Methode oder ein Modul – genau eine klar definierte Aufgabe übernehmen.
+
+Daher sollte der Code verbessert werden, indem diese Aufgaben voneinander getrennt und einzeln bearbeitet werden. Aber wie?
+
+Um diese Aufgaben voneinander zu trennen, sollte jede Aufgabe als eigene Funktion geschrieben werden. Dabei können sich die Funktionen gegenseitig aufrufen, um die gewünschte Funktionalität zu erfüllen.
 
 
