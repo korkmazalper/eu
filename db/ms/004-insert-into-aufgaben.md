@@ -6,6 +6,7 @@ Das SQL-Kommando ``INSERT INTO`` wird verwendet, um Daten in eine Tabelle einzuf
 
 Einfache Einfügung mit festen Werten (``VALUES``).
 Einfügung basierend auf einer Abfrage (``SELECT``).
+
 ```mermaid
 flowchart TB
     A(INSERT INTO)
