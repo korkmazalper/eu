@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0">
+		<title>Zahlenratespiel</title>
+		<link rel="stylesheet" href="./css/zahlenratespiel.css">
+	</head>
+	<body>
+		<h1>Zahlenratespiel</h1>
+		<p>
+			Erraten Sie die Zufallszahl zwischen 1 und 100!
+		</p>
+		<input type="text"
+			id="versuch"
+			placeholder="Geben Sie eine Zahl ein"
+			min="1"
+			max="100">
+		<button onclick="rateZahl()"
+			class="btn">
+			Raten
+		</button>
+		<p id="hinweis"></p>
+		<p id="versuche"></p>
+		<button onclick="spielZurücksetzen()"
+			class="btn">
+			Neues Spiel
+		</button>
+	</body>
+	<script src="./js/zahlenratespiel.js"></script>
+</html>

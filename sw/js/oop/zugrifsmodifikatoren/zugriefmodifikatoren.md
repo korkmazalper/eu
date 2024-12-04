@@ -2,6 +2,8 @@
 
 Zugriffsmodifikatoren in JavaScript sind wichtig, um die Kapselung und Datenintegrität in Programmen zu gewährleisten. Hier sind die Hauptgründe, warum sie benötigt werden:
 
+
+
 ## Prinzipien von OOP
 
 ![alt text](image.png)

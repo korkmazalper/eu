@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0">
+		<title>Geometrieberechnung</title>
+		<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, button {
+            margin-bottom: 15px;
+            padding: 5px;
+            font-size: 14px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+        }
+    </style>
+	</head>
+	<body>
+		<h1>Geometrieberechnung</h1>
+		<form id="geometryForm">
+			<label for="formType">Wähle eine Form:</label>
+			<select id="formType"
+				required>
+				<option value="Dreieck">Dreieck</option>
+				<option value="Viereck">Viereck</option>
+			</select>
+
+
+			<div id="inputFields"></div>
+
+
+			<button type="submit">Fläche berechnen</button>
+		</form>
+
+
+		<div class="result"
+			id="result"></div>
+
+
+		<script src="./js/gemoetri.js"></script>
+	</body>
+</html>

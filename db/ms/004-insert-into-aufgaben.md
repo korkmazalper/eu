@@ -68,7 +68,8 @@ VALUES ('Markus', 'Fischer', '0123456789',
 
 - Wenn die Abfrage in SELECT **keinen Datensatz** zurückgibt, schlägt der INSERT-Befehl fehl.
 Lösung: Sicherstellen, dass die Bedingung in WHERE korrekt ist.
-Referentielle Integrität:
+
+### Referentielle Integrität:
 
 - Wenn FOREIGN KEYS definiert sind, müssen die Abhängigkeiten zwischen Tabellen eingehalten werden.
 Beispiel: Die adresseid muss existieren, bevor ein Kunde eingefügt wird.
