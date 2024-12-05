@@ -15,7 +15,7 @@ Quelle: IT-Berufe, Westermann
 In dieser Phase wird das konzeptionelle Modell in ein relationales Datenmodell überführt.
 Dabei werden zwei Schritte durchlaufen. Im ersten Schritt wird das ER-Modell in ein relationales Datenmodell überführt. Im zweiten Schritt erfolgt eine Optimierung des relationalen Datenmodells durch Normalisierung.
 
-![alt text](logishce-phase.drawio.svg)
+![alt text](logishce-phase.png)
 Quelle: IT-Berufe, Westermann
 
 4.  **Implementationsphase (Erstellung der physischen Datenbank)**
