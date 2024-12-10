@@ -5,8 +5,7 @@
 2.  **Konzeptionelle Phase (Entwicklung eines konzeptionellen Modells)**
     Das Ziel der konzeptionellen Phase ist eine formalisierte Beschreibung des betrachteten Sach
     verhalts. Dazu gibt es mehrere Möglichkeiten. Der bekannteste Ansatz ist das ER-Modell.
-
-![alt text](konzeptionalle-phase.png)
+![alt text](konzeptionelle_hersteller_artikel.png)
 
 Quelle: IT-Berufe, Westermann
 
@@ -15,8 +14,7 @@ Quelle: IT-Berufe, Westermann
 In dieser Phase wird das konzeptionelle Modell in ein relationales Datenmodell überführt.
 Dabei werden zwei Schritte durchlaufen. Im ersten Schritt wird das ER-Modell in ein relationales Datenmodell überführt. Im zweiten Schritt erfolgt eine Optimierung des relationalen Datenmodells durch Normalisierung.
 
-![alt text](logische-phase.png)
-
+![alt text](logishce-phase.png)
 Quelle: IT-Berufe, Westermann
 
 4.  **Implementationsphase (Erstellung der physischen Datenbank)**
@@ -60,6 +58,7 @@ Astronauten, Missionen und Raumfahrzeuge werden in einer Datenbank gespeichert. 
 - Herstellungsjahr: Produktionsjahr des Raumfahrzeugs.
 - Kapazität: Beförderungskapazität des Raumfahrzeugs.
 
-2. **Konzeptionalle Phase** ?
+2. **Konzeptionalle Phase** 
+![alt text](raum-mission.erd.png)
 
 3. **Logische Phase** ?

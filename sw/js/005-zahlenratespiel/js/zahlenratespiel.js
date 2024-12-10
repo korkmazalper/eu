@@ -1,12 +1,12 @@
 let zufallszahl = Math.floor(Math.random() * 100) + 1; 
 let anzahlVersuche = 0; 
+
 function rateZahl() {
     let benutzerEingabe = parseInt(document.getElementById("versuch").value);
     anzahlVersuche++; 
     if (isNaN(benutzerEingabe)) {
         document.getElementById("hinweis").innerText = "Bitte geben Sie eine gültige Zahl ein.";
     }
-
     if (benutzerEingabe < zufallszahl) {
         document.getElementById("hinweis").innerText = "Zu niedrig! Versuchen Sie es erneut.";
     } else if (benutzerEingabe > zufallszahl) {

@@ -16,6 +16,7 @@ In dieser Phase wird das konzeptionelle Modell in ein relationales Datenmodell �
 Dabei werden zwei Schritte durchlaufen. Im ersten Schritt wird das ER-Modell in ein relationales Datenmodell überführt. Im zweiten Schritt erfolgt eine Optimierung des relationalen Datenmodells durch Normalisierung.
 
 ![alt text](logishce-phase.png)
+
 Quelle: IT-Berufe, Westermann
 
 4.  **Implementationsphase (Erstellung der physischen Datenbank)**
@@ -64,4 +65,100 @@ Astronauten, Missionen und Raumfahrzeuge werden in einer Datenbank gespeichert. 
 
 2. **Konzeptionalle Phase** ?
 
+![alt text](raum-mission.erd.png)
+
 3. **Logische Phase** ?
+
+
+```mermaid
+erDiagram
+    Astronaut {
+        int Astronaut_ID PK
+        string Vorname
+        string Nachname
+        date Geburtsdatum
+        string Nationalitaet
+        string Ausbildung_Stufe
+        int Flug_Stunden
+    }
+
+    Mission {
+        int Mission_ID PK
+        string Name
+        date Start_Date
+        date End_Date
+        string Ziel
+        int Weltraum_Fahrzeug_ID FK
+    }
+
+    Raumschiff_Fahrzeug {
+        int Raumschiff_ID PK
+        string Name
+        string Typ
+        string Hersteller
+        int Herstellungsjahr
+        int Kapazitaet
+    }
+
+    Astronaut_Mission {
+        int Astronaut_ID FK
+        int Mission_ID FK
+        string Rolle
+    }
+
+    Astronaut ||--o{ Astronaut_Mission : "1:N"
+    Mission ||--o{ Astronaut_Mission : "1:N"
+    Raumschiff_Fahrzeug ||--o{ Mission : "1:N"
+
+```
+
+```mermaid
+erDiagram
+    Astronaut {
+        int Astronaut_ID PK
+        string Vorname
+        string Nachname
+        date Geburtsdatum
+        string Nationalitaet
+        string Ausbildung_Stufe
+        int Flug_Stunden
+    }
+
+    Mission {
+        int Mission_ID PK
+        string Name
+        date Start_Date
+        date End_Date
+        string Ziel
+        int Raumschief_Fahrzeug_ID FK
+        int Kommandant_ID FK
+    }
+
+    Raumschiff_Fahrzeug {
+        int Raumschiff_ID PK
+        string Name
+        string Typ
+        string Hersteller
+        int Herstellungsjahr
+        int Kapazitaet
+    }
+
+    Astronaut_Mission {
+        int Astronaut_ID FK
+        int Mission_ID FK
+        string Rolle
+    }
+
+    %% Relationships
+    Astronaut ||--o{ PARTICIPATES_IN : "1:N"
+    Mission ||--o{ PARTICIPATES_IN : "1:N"
+    Astronaut_Mission }o--|| Mission : "N:1"
+    Astronaut_Mission }o--|| Astronaut : "N:1"
+    Mission ||--o{ USES : "N:1"
+    Astronaut ||--|| COMMANDS : "1:1"
+    Mission ||--|| COMMANDS : "1:1"
+    Raumschiff_Fahrzeug || --|| IS_USED : "1:N"
+    Mission ||--o{ IS_USED :"1:N"
+
+
+```
