@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0">
+		<title>
+			Auto und Motor-Reifen Beispiel
+		</title>
+		<link rel="stylesheet" href="./css/auto.css">
+	</head>
+	<body>
+		<h1>Auto-Motor-Reifen</h1>
+
+		<form id="autoForm">
+			<h2>Auto Hinzufügen</h2>
+			<label for="marke">Automarke:</label>
+			<input type="text"
+				id="marke"
+				placeholder="z.B. Toyota"
+				required>
+
+			<label for="farbe">Autofarbe:</label>
+			<input type="text"
+				id="farbe"
+				placeholder="z.B. Rot"
+				required>
+
+			<label for="motorTyp">Motortyp:</label>
+			<select id="motorTyp"
+				required>
+				<option value
+					disabled
+					selected>
+					Wählen Sie den Motortyp
+				</option>
+				<option value="Benzin">Benzin</option>
+				<option value="Elektro">Elektro</option>
+				<option value="Diesel">Diesel</option>
+			</select>
+
+
+
+
+			<label for="reifenMarke">Reifenmarke:</label>
+			<input type="text"
+				id="reifenMarke"
+				placeholder="z.B. Michelin"
+				required>
+
+
+
+
+			<button type="submit">Auto Hinzufügen</button>
+		</form>
+
+
+
+
+		<div id="autoListe">
+			<h2>Autoliste</h2>
+		</div>
+
+
+
+
+		<script src="./js/auto.js"></script>
+	</body>
+</html>
