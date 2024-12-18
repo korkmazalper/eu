@@ -1,8 +1,10 @@
 
-Produktregel: Mustafa, Leon, Amin, Robin
-Quotientenregel: Elias, Patrice, Leoncan, Nico 
-Kettenregel: Jan, Maxim, Noah, Michael
+Produktregel: Mustafa, Leon, Amin
+Quotientenregel: Patrice, Leoncan 
+Quotientenregel: Elias, Michael
+Kettenregel: Jan, Maxim, Noah
 Ableitungen von sin(x), cos(x), e^x: Tom, Marcel, Kenan, Firas
+Ableitungen von sin(x), cos(x), e^x: Robin, Niko 
 
 Produktregel: Laura, Nils, Johannes, Benjamin D.
 Quotientenregel: David, Jashan, San Dieago,     

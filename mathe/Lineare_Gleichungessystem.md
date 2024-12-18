@@ -180,3 +180,28 @@ Wenn du zwei solche Geraden in ein Koordinatensystem zeichnest, gibt es drei mö
 - **Ein Schnittpunkt**: Die beiden Geraden schneiden sich in genau einem Punkt. Dieser Punkt ist die Lösung des Gleichungssystems, da seine Koordinaten beide Gleichungen erfüllen.
 - **Keine Schnittpunkte**: Die beiden Geraden sind parallel und schneiden sich nicht. Das Gleichungssystem hat dann keine Lösung.
 - **Unendlich viele Schnittpunkte**: Die beiden Geraden fallen zusammen. Das bedeutet, jeder Punkt auf der Geraden ist eine Lösung, und das Gleichungssystem hat unendlich viele Lösungen.
+
+
+## Aufgabe
+„Stellt euch vor, wir planen eine Pizza-Party in der Klasse! 
+Wir haben ein Budget von 240 € und können insgesamt 20 Pizzen bestellen. 
+Große Pizzen kosten 15 € und mittlere 10 €. 
+Was denkt ihr: Wie viele große und wie viele mittlere Pizzen sollten wir bestellen?“
+
+
+```mermaid
+flowchart TD
+    subgraph Gegeben
+        B[Bedingungen festlegen: Gesamtzahl Pizzen = 20, Budget = 240 Euro]
+    end
+    subgraph Lösungsschritte
+        B--> C[Variablen definieren: 
+        x = große Pizza 
+        y = mittlere Pizza] --> D[Gleichungen aufstellen:
+        ] --> E[Die Gleichungen analysieren und Lösungsmethode auswählen] 
+        E --> F[Das lineare Gleichungssystem lösen]
+    end
+```
+
+I. x + y = 20 
+        II. 15x + 10y = 240
