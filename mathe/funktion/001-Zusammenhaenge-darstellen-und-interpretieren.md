@@ -15,4 +15,6 @@ Die Tabelle zeigt den Anteil der erneuerbaren Energien am Brutto-Stromverbrauch 
 
 ![alt text](aufgabe-2.png)
 
+## Aufgabe 3
+
 ![alt text](aufgabe-3.png)
