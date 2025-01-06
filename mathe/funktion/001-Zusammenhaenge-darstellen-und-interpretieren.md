@@ -10,3 +10,9 @@ Die Tabelle zeigt den Anteil der erneuerbaren Energien am Brutto-Stromverbrauch 
 - Welche Entwicklung ist langfristig zu erwarten?
 
 ![alt text](aufgabe-1.png)
+
+## Aufgabe 2
+
+![alt text](aufgabe-2.png)
+
+![alt text](aufgabe-3.png)
