@@ -10,6 +10,6 @@ Produktregel: Laura, Nils, Johannes, Benjamin D.
 Quotientenregel: David, Jashan, San Dieago,     
 Kettenregel: Benjamin B., Anxelo, Filip, Finn
 Ableitungen von sin(x), cos(x), e^x: Cata, Marcel, Jan Luca
-Quontientenregel: Markus, Oliver   
+Quotientenregel: Markus, Oliver   
 
 
