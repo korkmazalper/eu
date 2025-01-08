@@ -64,10 +64,12 @@ Astronauten, Missionen und Raumfahrzeuge werden in einer Datenbank gespeichert. 
 
 2. **Konzeptionalle Phase** ?
 
-![alt text](raum-mission.erd.png)
+![db/ms/raum-mission.erd.png](../raum-mission.erd.png)
+
 
 3. **Logische Phase** ?
-![alt text](erd-datenbankmodell.png)
+
+![db/ms/erd-datenbankmodell.png](../erd-datenbankmodell.png)
 
 
 ```sql
@@ -140,7 +142,10 @@ VALUES
 ("Thomas", "Wilson", 210, "US", "Flight-Academy"),
 ("Sophia", "Müller", 340, "DE", "Promotion"),
 ("Carlos", "Martinez", 290, "AR", "Masterstudium"),
-("Jasmin", "Margarita", 392,"ES","Masterstudium");
+("Jasmin", "Margarita", 392,"ES","Masterstudium"),
+("Katerina", "Karlov", 0,"FR","Masterstudium"),
+("Taka", "Takashi", 0,"JP","Promotion");
+
 
 INSERT INTO raumschiff_fahrzeug(herstellungsjahr, kapasitaet, hersteller, typ, name) 
 VALUES 
@@ -149,7 +154,10 @@ VALUES
 (1989, 10, "Nasa", "Einfach", "Challenger X"),
 (1991, 16, "SpaceX", "Modern", "Endeavour"),
 (1998, 15, "Powerbank", "Mega", "Freedom"),
-(2005, 16, "SpaceX", "Mega", "Falcon");
+(2005, 16, "SpaceX", "Mega", "Falcon"),
+(2025, 20, "SpaceY", "Modern", "Explorer X"),
+(2023, 8, "Orbital", "Einfach", "Lunar Star"),
+(2022, 12, "Nasa", "Mega", "Galaxy Ranger");
 
 INSERT INTO mission(name, ziel, startdate, enddate, raumschiff_fahrzeug_id) 
 VALUES 
@@ -169,9 +177,14 @@ VALUES
 ("Support to Independence", "Independence", "2018-01-11", "2019-06-15", 4),
 ("Deep Space Exploration", "Space", "2019-04-22", "2020-09-30", 6),
 ("Red Planet Research", "Mars", "2020-03-10", "2021-08-15", 5),
-("Alpha Centauri Mission", "Alpha Centauri", "2021-11-11", "2023-03-12", 6);
+("Alpha Centauri Mission", "Alpha Centauri", "2021-11-11", "2023-03-12", 6),
+("Unmanned Mars Mission", "Mars", "2025-01-01", "2025-06-30", NULL),
+("Unmanned Deep Space Mission", "Space", "2027-01-01", "2029-06-30", NULL)
+;
+
 INSERT INTO mission_astronaut (astronaut_id, mission_id)
 VALUES 
+(23, NULL),(24,NULL),
 (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1),
 (9, 2), (10, 2), (11, 2), (12, 2), (13, 2), (14, 2), (15, 2), (16, 2),
 (17, 3), (18, 3), (19, 3), (20, 3), (21, 3), (22, 3),
