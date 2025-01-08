@@ -3,7 +3,9 @@
 ![alt text](schema.png)
 
 1. **Liste alle Missionen und die Namen der zugehörigen Raumschiffe.**
-![alt text](aufgabe1.png)   
+
+![alt text](aufgabe1.png)  
+
 2. **Zeige die Namen aller Astronauten zusammen mit den Missionen, an denen sie teilgenommen haben.**
    
 3. **Liste alle Astronauten, die an Missionen teilgenommen haben, sortiert nach Nachnamen.**
@@ -30,7 +32,7 @@
  
 14. **Liste alle Raumschiffe, deren Kapazität mehr als 10 beträgt, zusammen mit den Missionsnamen.**
  
-15. **Zeige die Astronauten, die an Missionen teilgenommen haben und deren Flugstunden `NULL` sind.**
+15. **Zeige die Astronauten, die an Missionen teilgenommen haben und deren Flugstunden `0` sind.**
    
 16. **Finde alle Missionen, bei denen kein Raumschiff zugeordnet ist.**
  
@@ -39,4 +41,18 @@
 18. **Zeige alle Missionen, die zwischen 2015 und 2020 gestartet wurden, zusammen mit den Astronauten.**
  
 19. **Liste Astronauten und Missionen, deren Ziel "Jupiter" oder "Saturn" ist.**
+
+# LEFT JOIN
+
+- Liste aller Raumschiffe und ihrer zugehörigen Missionen Listen Sie alle Raumschiffe mit ihren Missionen auf. Zeigen Sie auch Raumschiffe an, die keiner Mission zugeordnet sind.
+
+- Zeigen Sie alle Astronauten und die Namen der Missionen an, an denen sie teilnehmen. Astronauten ohne Mission sollen ebenfalls angezeigt werden.
+
+- Listen Sie die Namen und Typen der Raumschiffe auf, die keiner Mission zugeordnet sind.
+
+- Listen Sie die Namen und Ausbildungsstufen der Astronauten auf, die keiner Mission zugeordnet sind.
+
+- Zeigen Sie die Namen der Missionen und die zugehörigen Raumschiffe an. Missionen ohne zugeordnetes Raumschiff sollen ebenfalls angezeigt werden.
+
+- Listen Sie die Missionen und die Namen der daran teilnehmenden Astronauten auf. Missionen ohne Teilnehmer sollen ebenfalls angezeigt werden.
  
