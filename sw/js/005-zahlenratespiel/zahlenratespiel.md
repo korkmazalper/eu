@@ -2,7 +2,7 @@
 ## Aufgabe:
 Entwickeln Sie ein Spiel, bei dem der Benutzer eine Zufallszahl zwischen 1 und 100 erraten muss. Das Spiel gibt nach jeder Eingabe folgende Hinweise:
 
-- Ob die eingegebene Zahl zu niedrig ist,
+- ob die eingegebene Zahl zu niedrig ist,
 - ob die eingegebene Zahl zu hoch ist,
 - oder ob die Zahl korrekt erraten wurde.
 - Wenn der Benutzer die Zahl errät, soll das Programm die Anzahl der Versuche anzeigen, die der Benutzer benötigt hat.
