@@ -27,6 +27,7 @@ Gegeben sei das folgende Gleichungssystem:
 $$
 I:   2x + y = 7 \\
 II:  x - y = 2
+
 $$
 
 #### Gleihsetzungsverfahren
@@ -36,13 +37,14 @@ $$
   $$
   I':   y = 7 -2x \\
   II':  y = x-2
-  $$
 
+  $$
 - Gleichsetzen:
 
 $$
 I' =II' \\
 7 -2x = x-2
+
 $$
 
 - Lösen :
@@ -51,12 +53,13 @@ $$
   7 -2x = x-2 \\
   9=3x \\
   x=3
-  $$
 
+  $$
 - Einsetzen:
 
 $$
 II:  x - y = 2 => 3-y=2 => y=1
+
 $$
 
 **Übung:** s.112 2-a
@@ -89,25 +92,36 @@ Gleichung II nach x umstellen:
 
 $$
 x = y + 2
+
 $$
 
 - Einsetzen:
 
 x in Gleichung 1 einsetzen:
 
-$$2(y + 2) + y = 7$$
+$$
+2(y + 2) + y = 7
+
+$$
 
 - Lösen:
 
 Gleichung lösen:
 
-$$3y + 4 = 7 => y = 1$$
+$$
+3y + 4 = 7 => y = 1
+
+$$
 
 - Rückwärts einsetzen:
 
 y = 1 in x = y + 2 einsetzen:
 
-$$x = 1 + 2 = 3$$
+$$
+x = 1 + 2 = 3
+
+$$
+
 Lösung:
 
 Das Gleichungssystem hat die Lösung x = 3 und y = 1.
@@ -151,17 +165,30 @@ Da die Koeffizienten von y bereits entgegengesetzt gleich sind (+y und -y), kön
 - Addieren:
 
 Addiere die beiden Gleichungen:
-$$(2x + y) + (x - y) = 7 + 2 => 3x = 9$$
+
+$$
+(2x + y) + (x - y) = 7 + 2 => 3x = 9
+
+$$
 
 - Lösen:
 
-Löse nach x auf: $$4x = 3$$
+Löse nach x auf: 
+
+$$
+4x = 3
+
+$$
+
 
 - Einsetzen:
 
 Setze x = 3 in Gleichung I ein:
 
-$$2*3 + y = 7 => y = 1$$
+$$
+2*3 + y = 7 => y = 1
+
+$$
 
 - Lösung:
 
@@ -181,13 +208,12 @@ Wenn du zwei solche Geraden in ein Koordinatensystem zeichnest, gibt es drei mö
 - **Keine Schnittpunkte**: Die beiden Geraden sind parallel und schneiden sich nicht. Das Gleichungssystem hat dann keine Lösung.
 - **Unendlich viele Schnittpunkte**: Die beiden Geraden fallen zusammen. Das bedeutet, jeder Punkt auf der Geraden ist eine Lösung, und das Gleichungssystem hat unendlich viele Lösungen.
 
-
 ## Aufgabe
-„Stellt euch vor, wir planen eine Pizza-Party in der Klasse! 
-Wir haben ein Budget von 240 € und können insgesamt 20 Pizzen bestellen. 
-Große Pizzen kosten 15 € und mittlere 10 €. 
-Was denkt ihr: Wie viele große und wie viele mittlere Pizzen sollten wir bestellen?“
 
+„Stellt euch vor, wir planen eine Pizza-Party in der Klasse!
+Wir haben ein Budget von 240 € und können insgesamt 20 Pizzen bestellen.
+Große Pizzen kosten 15 € und mittlere 10 €.
+Was denkt ihr: Wie viele große und wie viele mittlere Pizzen sollten wir bestellen?“
 
 ```mermaid
 flowchart TD
@@ -203,5 +229,5 @@ flowchart TD
     end
 ```
 
-I. x + y = 20 
-        II. 15x + 10y = 240
+I. x + y = 20
+II. 15x + 10y = 240

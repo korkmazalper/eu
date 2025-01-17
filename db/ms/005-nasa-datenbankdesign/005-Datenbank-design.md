@@ -1,11 +1,10 @@
 # Phasen des Designprozesses von relationalen Datenbanken
 
-1.  **Analysephase (Ermittlung der Informationsstruktur)**
-    Zunächst sind in einer Anforderungsanalyse die Anforderungen des Kunden an das zu entwickelnde Datenbanksystem zu ermitteln und zu strukturieren. Das Ergebnis dieser ersten Phase ist eine informelle Beschreibung des zu lösen den Problems.
-2.  **Konzeptionelle Phase (Entwicklung eines konzeptionellen Modells)**
-    Das Ziel der konzeptionellen Phase ist eine formalisierte Beschreibung des betrachteten Sach
-    verhalts. Dazu gibt es mehrere Möglichkeiten. Der bekannteste Ansatz ist das ER-Modell.
-
+1. **Analysephase (Ermittlung der Informationsstruktur)**
+   Zunächst sind in einer Anforderungsanalyse die Anforderungen des Kunden an das zu entwickelnde Datenbanksystem zu ermitteln und zu strukturieren. Das Ergebnis dieser ersten Phase ist eine informelle Beschreibung des zu lösen den Problems.
+2. **Konzeptionelle Phase (Entwicklung eines konzeptionellen Modells)**
+   Das Ziel der konzeptionellen Phase ist eine formalisierte Beschreibung des betrachteten Sach
+   verhalts. Dazu gibt es mehrere Möglichkeiten. Der bekannteste Ansatz ist das ER-Modell.
 
 Quelle: IT-Berufe, Westermann
 
@@ -18,8 +17,8 @@ Dabei werden zwei Schritte durchlaufen. Im ersten Schritt wird das ER-Modell in 
 
 Quelle: IT-Berufe, Westermann
 
-4.  **Implementationsphase (Erstellung der physischen Datenbank)**
-    Am Ende dieser Phase sollte eine leere funktionstüchtige Datenbank existieren. Dazu wird das logische Modell mithilfe von SQL in ein konkretes Datenbankschema übersetzt. Im Zuge dessen müssen Datentypen, Wertebereiche, Relationen usw. festgelegt werden.
+4. **Implementationsphase (Erstellung der physischen Datenbank)**
+   Am Ende dieser Phase sollte eine leere funktionstüchtige Datenbank existieren. Dazu wird das logische Modell mithilfe von SQL in ein konkretes Datenbankschema übersetzt. Im Zuge dessen müssen Datentypen, Wertebereiche, Relationen usw. festgelegt werden.
 
 ```sql
 CREATE TABLE Hersteller (HNr INTEGER, Name VARCHAR(50), Direktor varchar(100), PRIMARY KEY(HNr));
@@ -53,7 +52,7 @@ Astronauten, Missionen und Raumfahrzeuge werden in einer Datenbank gespeichert. 
 - Ziel: Der Himmelskörper oder die Region, auf die die Mission abzielt.
 - Weltraum_Fahrzeug: ID (Fremdschlüssel) des für die Mission verwendeten Raumfahrzeugs.
 - Crew: Eine Liste (mehrwertig) der IDs der an der Mission beteiligten Astronauten.
-  
+
 **Raumschiff_Fahrzeug:**
 
 - Name: Name des Raumfahrzeugs.
@@ -66,13 +65,13 @@ Astronauten, Missionen und Raumfahrzeuge werden in einer Datenbank gespeichert. 
 
 ![db/ms/raum-mission.erd.png](../raum-mission.erd.png)
 
-
 3. **Logische Phase** ?
 
 ![db/ms/erd-datenbankmodell.png](../erd-datenbankmodell.png)
 
-
 ```sql
+
+
 DROP DATABASE IF EXISTS nasa;
 CREATE DATABASE nasa;
 USE nasa;
@@ -157,7 +156,8 @@ VALUES
 (2005, 16, "SpaceX", "Mega", "Falcon"),
 (2025, 20, "SpaceY", "Modern", "Explorer X"),
 (2023, 8, "Orbital", "Einfach", "Lunar Star"),
-(2022, 12, "Nasa", "Mega", "Galaxy Ranger");
+(2022, 12, "Nasa", "Mega", "Galaxy Ranger"),
+(2022,11,"Nasa","Mega","Galaxy Ranger II");
 
 INSERT INTO mission(name, ziel, startdate, enddate, raumschiff_fahrzeug_id) 
 VALUES 
@@ -203,19 +203,6 @@ VALUES
 (9, 16), (10, 16), (11, 16), (12, 16), (13, 16), (14, 16), (15, 16),
 (16, 17), (17, 17), (18, 17), (19, 17), (20, 17), (21, 17), (22, 17);
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ```mermaid
 erDiagram

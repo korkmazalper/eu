@@ -13,6 +13,20 @@
             "database": "kunde_buch_v4",
             "username": "root",
             "password": "root"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "database": "db",
+            "username": "root",
+            "name": "db",
+            "askForPassword": true
         }
     ]
 }
