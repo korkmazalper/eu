@@ -64,6 +64,9 @@ Fügen Sie folgende Beispiel-Daten in die Tabellen ein:
 ## 5. Schreiben Sie die SQL-Abfragen
 
 a. Finden Sie alle Mitarbeiter, die für das Weiterbildungsangebot „Datenanalyse“ angemeldet sind.
+
 b. Sortieren Sie die Liste der Mitarbeiter, die für das Weiterbildungsangebot „Projektmanagement“ angemeldet sind, in aufsteigender Reihenfolge nach Nachnamen.
+
 c. Zeigen Sie die Titel der Weiterbildungsangebote und die Namen der angemeldeten Mitarbeiter an.
+
 d. Finden Sie alle Mitarbeiter, deren E-Mail-Adresse mit „firma.com“ endet.
