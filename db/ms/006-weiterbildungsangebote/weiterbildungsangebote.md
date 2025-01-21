@@ -28,19 +28,19 @@ Fügen Sie folgende Beispiel-Daten in die Tabellen ein:
 
 ## Mitarbeiter:
 
-•	Anna Meier (Abteilung: IT, Geburtsdatum: 1987-05-14, Telefon: 0123456789, Email: anna.meier@firma.com)
+    +   Anna Meier (Abteilung: IT, Geburtsdatum: 1987-05-14, Telefon: 0123456789, Email: anna.meier@firma.com)
     -	Angebote: Projektmanagement, Datenanalyse
 
-•	Ben Müller (Abteilung: Vertrieb, Geburtsdatum: 1990-11-20, Telefon: 0987654321, Email: ben.mueller@firma.com)
+    +   Ben Müller (Abteilung: Vertrieb, Geburtsdatum: 1990-11-20, Telefon: 0987654321, Email: ben.mueller@firma.com)
     -   Angebote: Kundenkommunikation
 
-•	Clara Schulz (Abteilung: Finanzen, Geburtsdatum: 1985-07-10, Telefon: 01762345678, Email: clara.schulz@firma.com)
+    +   Clara Schulz (Abteilung: Finanzen, Geburtsdatum: 1985-07-10, Telefon: 01762345678, Email: clara.schulz@firma.com)
     - Angebote: Excel-Intensivkurs
 
-•	Daniel Weber (Abteilung: IT, Geburtsdatum: 1992-03-08, Telefon: 01522334455, Email: daniel.weber@firma.com)
+    +   Daniel Weber (Abteilung: IT, Geburtsdatum: 1992-03-08, Telefon: 01522334455, Email: daniel.weber@firma.com)
     - Angebote: Projektmanagement
 
-•	Eva Klein (Abteilung: Personal, Geburtsdatum: 1989-02-18, Telefon: 01609876543, Email: eva.klein@firma.com)
+    +   Eva Klein (Abteilung: Personal, Geburtsdatum: 1989-02-18, Telefon: 01609876543, Email: eva.klein@firma.com)
     -	Angebote: Projektmanagement, Kundenkommunikation
 
 ## Weiterbildungsangebote:
