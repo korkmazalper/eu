@@ -5,11 +5,16 @@ Dabei sollen die folgenden Entitäten und Beziehungen enthalten sein:
 - Mitarbeiter-Attribute: MitarbeiterID, Vorname, Nachname, Geburtsdatum, Telefon, Email, Abteilung
 - Weiterbildungsangebot-Attribute: AngebotID, Titel, Beschreibung, Startdatum, Enddatum
 
+- Ein Mitarbeiter kann in mehreren Weiterbildungen eingeschrieben sein. 
+- Zu einer Weiterbildung können mehrere Mitarbeiter eingeschrieben sein.
+
 Die Datenbank sollte uns helfen, alle Anmeldungen effizient zu verwalten und Informationen zu den Mitarbeitern und den Kursen jederzeit abrufbar zu machen."   
 
 ![alt text](bild-1.png)
 
 ![alt text](bild-2.png)
+
+
 
 ________________________________________
 ## 1. ERM-Modell erstellen
@@ -19,7 +24,9 @@ Erstellen Sie ein Entity-Relationship-Modell (ERM), das folgende Entitäten und 
 - Weiterbildungsangebot-Attribute: AngebotID, Titel, Beschreibung, Startdatum, Enddatum
 
 ## 2. Datenbankmodell erstellen
+
 Basierend auf dem ERM-Modell erstellen Sie ein Datenbankmodell, das die Tabellenstruktur beschreibt:
+
 1.	Definieren Sie die notwendigen Tabellen mit den Attributen und deren Datentypen.
 2.	Verwenden Sie Primär- und Fremdschlüssel, um die Datenbankstruktur korrekt und konsistent zu gestalten.
 
