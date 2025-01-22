@@ -1,7 +1,10 @@
 Herr Schuster hat folgende Anfrage gestellt:
-"Wir benötigen eine Datenbank, die die Verwaltung von Weiterbildungsangeboten und Mitarbeiteranmeldungen erleichtert. Dabei sollen die folgenden Entitäten und Beziehungen enthalten sein:
-•	Mitarbeiter-Attribute: MitarbeiterID, Vorname, Nachname, Geburtsdatum, Telefon, Email, Abteilung
-•	Weiterbildungsangebot-Attribute: AngebotID, Titel, Beschreibung, Startdatum, Enddatum
+"Wir benötigen eine Datenbank, die die Verwaltung von Weiterbildungsangeboten und Mitarbeiteranmeldungen erleichtert. 
+Dabei sollen die folgenden Entitäten und Beziehungen enthalten sein:
+
+- Mitarbeiter-Attribute: MitarbeiterID, Vorname, Nachname, Geburtsdatum, Telefon, Email, Abteilung
+- Weiterbildungsangebot-Attribute: AngebotID, Titel, Beschreibung, Startdatum, Enddatum
+
 Die Datenbank sollte uns helfen, alle Anmeldungen effizient zu verwalten und Informationen zu den Mitarbeitern und den Kursen jederzeit abrufbar zu machen."   
 
 ![alt text](bild-1.png)
@@ -11,8 +14,10 @@ Die Datenbank sollte uns helfen, alle Anmeldungen effizient zu verwalten und Inf
 ________________________________________
 ## 1. ERM-Modell erstellen
 Erstellen Sie ein Entity-Relationship-Modell (ERM), das folgende Entitäten und Beziehungen mit Kardinalitäten enthält:
-•	Mitarbeiter-Attribute: MitarbeiterID, Vorname, Nachname, Geburtsdatum, Telefon, Email, Abteilung
-•	Weiterbildungsangebot-Attribute: AngebotID, Titel, Beschreibung, Startdatum, Enddatum
+
+- Mitarbeiter-Attribute: MitarbeiterID, Vorname, Nachname, Geburtsdatum, Telefon, Email, Abteilung
+- Weiterbildungsangebot-Attribute: AngebotID, Titel, Beschreibung, Startdatum, Enddatum
+
 ## 2. Datenbankmodell erstellen
 Basierend auf dem ERM-Modell erstellen Sie ein Datenbankmodell, das die Tabellenstruktur beschreibt:
 1.	Definieren Sie die notwendigen Tabellen mit den Attributen und deren Datentypen.
@@ -56,7 +61,7 @@ Fügen Sie folgende Beispiel-Daten in die Tabellen ein:
         Startdatum: 2025-01-15
         Enddatum: 2025-02-28
 
-Mitarbeiter und die Weiterbildungsangebote, in denen sie eingeschrieben sind:
+## Mitarbeiter und die Weiterbildungsangebote, in denen sie eingeschrieben sind:
 
     - Anna Meier : Projektmanagement, Datenanalyse
     - Ben Müller : Kundenkommunikation
