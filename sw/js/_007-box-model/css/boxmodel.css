@@ -1,0 +1,27 @@
+body{
+    background-color: aquamarine;
+    align-items: center;
+    justify-items: center;
+}
+div{
+    border: 2mm solid black;
+}
+.container{
+    margin-top: 3cm;
+    width:50%;
+    height:50%;
+    background-color: lightcoral;
+    padding:1cm;
+}
+.innere-container{
+    width:50%;
+    border-color: royalblue;
+    margin-left: 20mm;
+    padding: 10mm;
+}
+.second-container{
+    width:50%;
+    border-color: yellowgreen;
+    margin-left: 20mm;
+    padding: 10mm;
+}
