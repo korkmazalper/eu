@@ -179,3 +179,96 @@ ORDER BY m.name
 LIMIT 100;
 
 ```
+# Group By
+
+### **Aufgabe 1**
+```sql
+SELECT nationalitaet, COUNT(*) AS anzahl_astronauten
+FROM astronaut
+GROUP BY nationalitaet
+ORDER BY anzahl_astronauten DESC;
+```
+
+### **Aufgabe 2**
+```sql
+SELECT ausbildungs_stufe, AVG(flugstunde) AS durchschnitt_flugstunden
+FROM astronaut
+GROUP BY ausbildungs_stufe
+ORDER BY durchschnitt_flugstunden DESC;
+```
+
+### **Aufgabe 3**
+```sql
+SELECT ziel, COUNT(*) AS anzahl_missionen
+FROM mission
+WHERE ziel LIKE 'M%'
+GROUP BY ziel
+ORDER BY anzahl_missionen DESC;
+```
+
+### **Aufgabe 4**
+```sql
+SELECT CONCAT(a.vorname, ' ', a.nachname) AS astronaut_name, COUNT(ma.mission_id) AS anzahl_missionen
+FROM astronaut a
+LEFT JOIN mission_astronaut ma ON a.astronaut_id = ma.astronaut_id
+GROUP BY a.astronaut_id
+ORDER BY anzahl_missionen DESC;
+```
+
+### **Aufgabe 5**
+```sql
+SELECT hersteller, COUNT(*) AS anzahl_raumschiffe
+FROM raumschiff_fahrzeug
+GROUP BY hersteller
+HAVING COUNT(*) >= 2
+ORDER BY anzahl_raumschiffe DESC;
+```
+
+### **Aufgabe 6**
+**Wie viele Astronauten haben an jeder Mission teilgenommen?**
+
+```sql
+SELECT m.ziel, COUNT(ma.astronaut_id) AS anzahl_astronauten
+FROM mission m
+LEFT JOIN mission_astronaut ma ON m.mission_id = ma.mission_id
+GROUP BY m.ziel
+ORDER BY anzahl_astronauten DESC;
+```
+
+### **Aufgabe 7**
+**Wie hoch ist die durchschnittliche Kapazität der Raumschiffe pro Hersteller?**
+```sql
+SELECT r.hersteller, AVG(r.kapasitaet) AS durchschnitt_kapazitaet
+FROM raumschiff_fahrzeug r
+LEFT JOIN mission m ON r.raumschiff_fahrzeug_id = m.raumschiff_fahrzeug_id
+GROUP BY r.hersteller;
+```
+
+### **Aufgabe 8**
+**Wie viele Missionen hat jeder Astronaut absolviert?**
+```sql
+SELECT CONCAT(a.vorname, ' ', a.nachname) AS astronaut_name, COUNT(DISTINCT m.mission_id) AS missionen
+FROM astronaut a
+INNER JOIN mission_astronaut ma ON a.astronaut_id = ma.astronaut_id
+INNER JOIN mission m ON ma.mission_id = m.mission_id
+GROUP BY a.astronaut_id;
+```
+
+### **Aufgabe 9**
+**Welche Missionen hatten mehr als zwei Astronauten?**
+```sql
+SELECT m.name AS mission_name, COUNT(ma.astronaut_id) AS astronauten_anzahl
+FROM mission m
+LEFT JOIN mission_astronaut ma ON m.mission_id = ma.mission_id
+GROUP BY m.name
+HAVING COUNT(ma.astronaut_id) > 2;
+```
+
+### **Aufgabe 10**
+**Wie viele Missionen wurden mit jedem Raumschifftyp durchgeführt?**
+```sql
+SELECT r.typ, COUNT(m.mission_id) AS mission_anzahl
+FROM raumschiff_fahrzeug r
+LEFT JOIN mission m ON r.raumschiff_fahrzeug_id = m.raumschiff_fahrzeug_id
+GROUP BY r.typ;
+```

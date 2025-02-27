@@ -33,3 +33,19 @@
 - Listen Sie die Namen und Ausbildungsstufen der Astronauten auf, die keiner Mission zugeordnet sind.
 - Zeigen Sie die Namen der Missionen und die zugehörigen Raumschiffe an. Missionen ohne zugeordnetes Raumschiff sollen ebenfalls angezeigt werden.
 - Listen Sie die Missionen und die Namen der daran teilnehmenden Astronauten auf. Missionen ohne Teilnehmer sollen ebenfalls angezeigt werden.
+
+# Group by  - Aggregatefunktionen
+
+## Aufgaben für die NASA-Datenbank
+
+- Ermitteln Sie die Anzahl der Astronauten pro Nationalität. (absteigend sortiert nach der Anzahl)
+- Ermitteln Sie die durchschnittlichen Flugstunden der Astronauten nach ihrer Ausbildungsstufe.
+- Wie viele Missionen wurden zu jedem Zielort durchgeführt, die mit "M" beginnen?
+- Wie viele verschiedene Raumschiffe hat jeder Hersteller produziert, falls es mindestens zwei gibt?
+- Wie viele Missionen hat jeder Astronaut absolviert?
+- Wie hoch ist die durchschnittliche Kapazität der Raumschiffe pro Hersteller?
+- Wie viele Missionen hat jeder Astronaut absolviert?
+- Welche Missionen hatten mehr als zwei Astronauten?
+- Wie viele Missionen wurden mit jedem Raumschifftyp durchgeführt?
+
+
